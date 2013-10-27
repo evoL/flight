@@ -2,6 +2,7 @@
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{tabularx}
 
 \newcommand*{\titleGP}{\begingroup
 \centering
@@ -21,7 +22,7 @@
 \rule{\textwidth}{1.6pt}\\[\baselineskip]
 
 \scshape
-{\huge Spis dokumentów}\par
+{\huge Założenia ogólne}\par
 \vspace*{2\baselineskip}
 
 \begin{figure}[h]
@@ -36,10 +37,27 @@
 
 \endgroup}
 
-
 \begin{document}
 
 \thispagestyle{empty}
 \titleGP
+
+\begin{center}
+\begin{table}[h]
+\begin{center}
+\begin{tabularx}{1\textwidth}{|l|l|l|X|}
+\hline
+Data & Wersja & Autor & Opis zmian \\ \hline
+27.10.2013 & 1.0 & Zespół & Utworzenie dokumentu
+\end{tabularx}
+\end{center}
+\vspace{3ex}
+\caption{Historia zmian dokumentu}\label{T:Zmiany}
+\end{table}
+\end{center}
+
+\pagebreak
+
+\section{Opis produktu}
 
 \end{document}
