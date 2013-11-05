@@ -1,0 +1,120 @@
+\documentclass{mwart}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{changepage}
+\usepackage{hyperref}
+
+\newcommand*{\titleGP}{\begingroup
+\centering
+
+{\Large Studencka Pracownia Inżynierii Oprogramowania}\par
+\vspace*{16\baselineskip}
+
+{\LARGE Rafał Hirsz, Karol Wieczorek, Krzysztof Wróbel\par}
+\vspace*{\baselineskip}
+
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+\rule{\textwidth}{0.4pt}\\[\baselineskip]
+
+{\Huge SYMULATOR LOTU}\\[0.2\baselineskip]
+
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+\rule{\textwidth}{1.6pt}\\[\baselineskip]
+
+\scshape
+{\huge Kosztorys}\par
+\vspace*{2\baselineskip}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=5\baselineskip]{flightsim-team-logo.pdf}
+\end{figure}
+\vfill
+
+{\large Wrocław 2013}\par
+
+\pagebreak
+
+\endgroup}
+
+\begin{document}
+
+\thispagestyle{empty}
+\titleGP
+
+\begin{center}
+\begin{table}[h]
+\begin{center}
+\begin{tabularx}{1\textwidth}{|l|l|l|X|}
+\hline
+Data & Wersja & Autor & Opis zmian \\ \hline
+5.11.2013 & 1.0 & Zespół & Utworzenie dokumentu \\
+\hline
+\end{tabularx}
+\end{center}
+\vspace{3ex}
+\caption{Historia zmian dokumentu}\label{T:Zmiany}
+\end{table}
+\end{center}
+
+\pagebreak
+
+\tableofcontents
+
+\newpage
+
+\section{Wstęp}
+Kosztorys został sporządzony na bazie danych pochodzących z raportu "Wynagrodzenia na stanowiskach IT w 2012 roku" wydanego przez kancelarię Sedlak \& Sedlak.\footnote{\url{http://wynagrodzenia.pl}}
+
+\section{Zespół}
+
+Planujemy oddać część pracy w ręce zewnętrznych podwykonawców. Dlatego dokonujemy podziału zespołu na zespół stacjonarny i niestacjonarny.
+
+\subsection{Zespół stacjonarny}
+
+\begin{itemize}
+\item 10 programistów C++
+\item 2 kierowników zespołów
+\item 4 testerów oprogramowania
+\end{itemize}
+
+\subsection{Zespół niestacjonarny}
+
+\begin{itemize}
+\item 2 grafików 2D
+\item 2 grafików 3D
+\end{itemize}
+
+\section{Miesięczne wynagrodzenia brutto pracowników}
+
+\begin{tabular}{lr}
+programista C++ & 6500 zł \\
+kierownik zespołu & 8000 zł \\
+grafik 3D & 7400 zł \\
+grafik 2D & 3700 zł \\
+tester oprogramowania & 4200 zł
+\end{tabular}
+
+\section{Koszt utrzymania pracowników}
+
+\begin{tabular}{llr}
+programiści C++ & 20 miesięcy & 1 300 000 zł \\
+kierownik zespołu & 20 miesięcy & 160 000 zł \\
+graficy 3D & 13 miesięcy & 192 400 zł \\
+graficy 2D & 13 miesięcy & 96 200 zł \\
+testerzy & 20 miesięcy & 336 000 zł 
+\end{tabular}
+
+\section{Koszt całkowity}
+
+\begin{tabular}{lr}
+wynagrodzenia & 2 084 600 zł \\
+bufor na nieprzewidziane wydatki & 40 000 zł \\
+\hline
+suma & 2 124 600 zł
+\end{tabular}
+
+\end{document}
