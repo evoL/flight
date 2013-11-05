@@ -2,18 +2,18 @@
 \usepackage{polski}
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{tgbonum}
 \usepackage{graphicx}
 \usepackage{tabularx}
+\usepackage{changepage}
 \usepackage{hyperref}
 
 \newcommand*{\titleGP}{\begingroup
 \centering
 
-{\large Studencka Pracownia Inżynierii Oprogramowania}\par
+{\Large Studencka Pracownia Inżynierii Oprogramowania}\par
 \vspace*{16\baselineskip}
 
-{\Large Rafał Hirsz, Karol Wieczorek, Krzysztof Wróbel\par}
+{\LARGE Rafał Hirsz, Karol Wieczorek, Krzysztof Wróbel\par}
 \vspace*{\baselineskip}
 
 \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
@@ -51,8 +51,7 @@
 \begin{tabularx}{1\textwidth}{|l|l|l|X|}
 \hline
 Data & Wersja & Autor & Opis zmian \\ \hline
-05.11.2013 & 1.0 & Zespół & Utworzenie dokumentu \\
-\hline
+05.11.2013 & 1.0 & Zespół & Utworzenie dokumentu
 \end{tabularx}
 \end{center}
 \vspace{3ex}
@@ -67,7 +66,7 @@ Data & Wersja & Autor & Opis zmian \\ \hline
 \chapter{Słownik pojęć}
 
 \begin{description}
-\item[Kąt natarcia] - (ang. \emph{angle of attack}) jest to (umowny) kąt pomiędzy kierunkiem strugi napływającego powietrza, a~cięciwą skrzydła.
+\item[Kąt natarcia] - (ang. \emph{angle of atack}) jest to (umowny) kąt pomiędzy kierunkiem strugi napływającego powietrza, a~cięciwą skrzydła.
 \item[Krawędź natarcia] - (ang. \emph{leading edge}) przednia krawędź skrzydła.
 \item[Krawędź spływu] - (ang. \emph{trailing edge}) tylna część skrzydła, gdzie zbiegają się strugi powietrza znad i~spod skrzydła.
 \item[Klapy] - (ang. \emph{flaps}) ruchome powierzchnie sterowe, umiejscowione zazwyczaj w~tylnej części skrzydła statku powietrznego, pozwalająca w~razie potrzeby znacznie zwiększyć siłę nośną oraz opór skrzydła.
@@ -82,10 +81,12 @@ Data & Wersja & Autor & Opis zmian \\ \hline
 \item[Sztuczny horyzont] - przyrząd pomagający w~określeniu orientacji przestrzennej samolotu wzgledem horyzontu.
 \item[ILS] - (ang. \emph{Instrumental Landing System}) radiowy system nawigacyjny wspomagający lądowanie samolotu w~warunkach ograniczonej widoczności.
 \item[VOR] - (ang. \emph{VHF Omni-directional Range}) rodzaj radiolatarni stosowanej w~lotnictwie.
-\item[DME] - (ang. \emph{Distance Measuring Equipment}) radiowa pomoc nawigacyjna służąca do pomiaru fizycznej odległości pomiędzy samolotem a~stacją naziemną.
-\item[NDB] - (ang. \emph{Non-Directional Beacon}) naziemna radiolatarnia bezkierunkowa.
+\item[DME] - (ang. \emph{Distance Measuring Equipment} radiowa pomoc nawigacyjna służąca do pomiaru fizycznej odległości pomiędzy samolotem a~stacją naziemną.
+\item[NDB] - (ang. \emph{Non-Directional Beacon} naziemna radiolatarnia bezkierunkowa.
 \item[TCAS] - (ang. \emph{Traffic Alert and Collision Avoidance System}) pokładowy system zapobiegający zderzeniom statków powietrznych.
-\item[TAWS] - (ang. \emph{Terrain Awareness and Warning System}) urządzenie pokładowe ostrzegające pilotów o~zbliżającej się powierzchni gruntu.
+\item[TAWS] - (ang. \emph{Terrain Awareness and Warning System}) urządzenie pokładowe ostrzegające pilotów o zbliżającej się powierzchni gruntu.
+\item[Metoda punktów funkcyjnych] - najczęściej stosowana metoda szacowania wielkości systemów informatycznych uzależniająca ich złożoność od ilości realizowanych przez nie funkcji.
+\item[COCOMO II] - jedna z metod szacowania pracochłonności systemu informatycznego bazująca na rozmiarze oprogramowania
 \end{description}
 
 \chapter{Specyfikacja produktu}
@@ -102,9 +103,9 @@ Podstawowym celem symulatora jest dokładne wymodelowanie zjawisk fizycznych. Ko
 
 \subsection{Modelowanie ruchu samolotu}
 
-Statek powietrzny jest w~sensie fizycznym bryłą sztywną o~zmieniającym się w~czasie ruchu kształcie i~masie. Działają siły różnego pochodzenia. Można wsród nich wymienić:
+Statek powietrzny jest w~sensie fizycznym bryłą sztywną o zmieniającym się w~czasie ruchu kształcie i~masie. Działają siły różnego pochodzenia. Można wsród nich wymienić:
 \begin{description}
-\item[Grawitacja ziemska] w~zależności od aktualnego położenia obiektu na Ziemi i~wysokości nad poziomem morza przyspieszenie ziemskie może mieć minimalnie różne wartości. Spowodowane to jest odległością od środka planety i~siły odśrodkowej wywołanej jej ruchem obrotowym.
+\item[Grawitacja ziemska] w~zależności od aktualnego położenia obiektu na Ziemii i~wysokości nad poziomem morza przyspieszenie ziemskie może mieć minimalnie różne wartości. Spowodowane to jest odległością od środka planety i~siły odśrodkowej wywołanej jej ruchem obrotowym.
 \item[Siła nośna] Skrzydła samolotu poruszające się w~ściśliwym płynie takim, jakim jest powietrze, generują siłę przeciwną do siły grawitacji. Pozwala to na unoszenie się obiektu nad Ziemią. Wartość siły nośnej zależy od profilu skrzydła, jego powierzchni, prędkości w~ośrodku, kąta natarcia, ciśnienia atmosferycznego, temperatury, wychylenia klap i~skrzeli (slotów). Obroty samolotu wokół jego osi są powodowane przez różnice w~sile nośnej generowanej przez poszczególne powierzchnie. Wychylanie lotek generuje różnice siły nośnej na skrzydłach, co jest przyczyną przechylania się maszyny na boki. Usterzenie na statecznikach pionowych i~poziomych obraca obiekt odpowiednio w~osi pionowej i~wdłuż skrzydeł. Pozycja poszczególnych powierzchni sterujących może być zachowana poprzez użycie trymeru.
 \item[Opór powietrza] Ruch obiektu w~atmosferze wymaga użycia siły do przesuwania napotkanych molekułów. Siła ta rośnie wraz ze wzrostem gęstości ośrodka i~prędkości przesuwania się w~nim.
 \item[Ciąg] Siła ciągu jest wynikiem działania silników. Planuje się implementacje trzech różnych rodzajów napędu: śmigłowy, odrzutowy i~rakietowy. Moc ciągu zależy od tempa spalania paliwa, gęstości powietrza i~od indywidualnych właściwości silnika. Przy locie wznoszącym lub opadającym ciąg ma wpływ na siłę nośną statku.
@@ -117,23 +118,21 @@ Ważną informacją potrzebną do symulacji ruchu samolotu jest jego rozkład ma
 
 \subsection{Warunki pogodowe}
 Oferowane będą trzy tryby pogody.
-
 \begin{itemize}
 \item Warunki predefiniowane przez użytkownika.
 \item Warunki zgodne z~lokalnym klimatem, porą roku i~dnia.
 \item Warunki aktualne (pobierane z~zewnętrznych zasobów).
 \end{itemize}
-
-\noindent w~każdym z~przypadków, wpływ na rzeczywiste odczyty temperatury, wilgotności i~ciśnienia ma wysokość, na której znajduje się obiekt.
+W każdym z~przypadków, wpływ na rzeczywiste odczyty temperatury, wilgotności i~ciśnienia ma wysokość, na której znajduje się obiekt.
 
 
 \subsection{Wykrywanie kolizji}
-Ze względów etycznych, po rozbiciu samolotu zostanie wygenerowany jedynie komunikat mówiący o~jego zniszczeniu. Nieprzewidywane są żadne animacje katastrofy i~wraku. Kolizje z~terenem poza miejscem lądowania będą wykrywane mniej dokładnie oraz będą od razu przerywały symulację lotu. W~przypadku lotnisk informacja o~kolizji będzie wyświetlana w~wyniku przeciążenia podwozia lub dotknięcia ziemi innym elementem maszyny. Zarówno zbliżenia do terenu lotniska, jak i~do innych obiektów będą symulowane z~najwyższą szczegółowością.
+Ze względów etycznych, po rozbiciu samolotu zostanie wygenerowany jedynie komunikat mówiący o jego zniszczeniu. Nie przewidywane są żadne animacje katastrofy i~wraku. Kolizje z~terenem poza miejscem lądowania będą wykrywane mniej dokładnie oraz będą od razu przerywały symulację lotu. W~przypadku lotnisk informacja o kolizji będzie wyświetlana w~wyniku przeciążenia podwozia lub dotknięcia ziemi innym elementem maszyny. Zarówno zbliżenia do terenu lotniska, jak i~do innych obiektów będą symulowane z~najwyższą szczegółowością.
 
 \subsection{Dane techniczne samolotów}
-Program ma umożliwiać korzystanie z~różnych modeli samolotów. Niekoniecznie muszą one być dostarczone przez wytwórce symulatora. Dane konfiguracyjne powinny spełniać specyfikację ze strony \linebreak \url{http://msdn.microsoft.com/en-us/library/cc526949.aspx} .
+Program ma umożliwiać korzystanie z~różnych modeli samolotów. Niekoniecznie muszą one być dostarczone przez wytwórce symulatora. Dane konfiguracyjne powinny spełniać specyfikację ze strony \linebreak \texttt{http://msdn.microsoft.com/en-us/library/cc526949.aspx} .
 
-\subsection{Topografia Ziemi}
+\subsection{Topografia Ziemii}
 Przewiduje się symulację lotu w~realnym świecie. Ukształtowanie terenu, jeziora, morza i~położenie lotnisk będą wczytywane z~map. Kształt planety powinien być elipsoidą obrotową spłaszczoną na biegunach wg systemu odniesienia WGS-84.
 
 \subsection{Pomoce nawigacyjne}
@@ -155,7 +154,7 @@ Implementacji wymaga ruch służb lotniskowych, np. cystern, samochodów, holown
 Ważnym elementem przed startem maszyny jest zaplanowanie lotu. Aplikacja będzie umożliwiała graficzne zaplanowanie trasy przelotu i~ilości paliwa.
 
 \subsection{Interfejs użytkownika}
-Interfejs użytkownika powinien pozwalać w~trybie okienkowym na skonfigurowanie parametrów symulacji. w~szczególności jest to: wybór samolotu, dnia, godziny, miejsca startu, pogody, trasy lotu, ilości paliwa i~liczby pasażerów.
+Interfejs użytkownia powinien pozwalać w~trybie okienkowym na skonfiguranie parametrów symulacji. w~szczególności jest to: wybór samolotu, dnia, godziny, miejsca startu, pogody, trasy lotu, ilości paliwa i~liczby pasażerów.
 
 \subsection{Gra online}
 Użytkownicy będą mogli współpracować ze sobą i~widzieć się nawzajem, grając poprzez sieć internetową.
@@ -171,7 +170,7 @@ Symulacja podobna jest do poprzedniej z~tą różnicą, że uczestniczyć w~niej
 \subsection{Samouczek}
 Tryb treningowy pozwalający na praktykę sztuki pilotażu i~poznawanie pomocy nawigacyjnych.
 \subsection{Misje}
-Specjalne, z góry określone zadania do wykonania przez gracza. Za ich ukończenie przyznawane będą trofea.
+Specjalne predefiniowane zadania do wykonania przez gracza. Za ich ukończenie przyznawane będą trofea.
 
 \section{Opis użytkownika}
 Z definicji gra jest dokładnym symulatorem i~jej celem nie jest zabawiać, tylko dokładnie modelować rzeczywistość. Od użytkownika oczekuje się precyzji, cierpliwości, opanowania, szybkiej reakcji, zdolności manualnych, jak i~chęci nauki oraz znajomości języka angielskiego.
@@ -179,8 +178,8 @@ Z definicji gra jest dokładnym symulatorem i~jej celem nie jest zabawiać, tylk
 \chapter{Harmonogram}
 
 \section{Opis}
-Harmonogram przedsięwzięcia został sporządzony przy użyciu powszechnie stosowanych metod szacowania rozmiaru i~pracochłonności oprogramowania oraz w~oparciu o~wiedzę członków zespołu. Do wyznaczenia wielkości projektu użyto metody punktów funkcyjnych i~na jej podstawie stwierdzono, że kod programu będzie miał ok. 50-70 tysięcy linii. Następnie przy pomocy metody COCOMO~II obliczono przybliżoną pracochłonność całego projektu (wyniosła ok. 180 osobomiesięcy) oraz jego poszczególnych części składowych. Do tego wyniku dodano 20 osobomiesięcy buforu związanego z urlopami pracowników i~innymi niemożliwymi do przewidzenia zdarzeniami. Przy założeniu, że zespół programistów będzie liczył 10 osób, wykonanie oprogramowania powinno zająć niecałe dwa lata.
-Poniższy harmonogram przedstawia planowany przebieg prac nad projektem i~ze względu na wczesną fazę prac jest obłożony dużą niedokładnością, jego dokładniejsza wersja powstanie w~fazie analizy. 
+Harmonogram przedsięwzięcia został sporządzony przy użyciu powszechnie stosowanych metod szacowania rozmiaru i pracochłonności oprogramowania oraz w oparciu o wiedzę członków zespołu. Do wyznaczenia wielkości projektu użyto metody punktów funkcyjnych i na jej podstawie stwierdzono, że kod programu będzie miał ok. 50-70 tysięcy linii. Następnie przy pomocy metody COCOMO II obliczono przybliżoną pracochłonność całego projektu (wyniosła ok. 180 osobomiesięcy) oraz jego poszczególnych części składowych. Do tego wyniku dodano 20 osobomiesięcy buforu związanego z urlopami pracowników i innymi niemożliwymi do przewidzenia zdarzeniami. Przy założeniu, że zespół programistów będzie liczył 10 osób, wykonanie oprogramowania powinno zająć niecałe dwa lata.
+Poniższy harmonogram przedstawia planowany przebieg prac nad projektem i ze względu na wczesną fazę prac jest obłożony dużą niedokładnością, jego dokładniejsza wersja powstanie w fazie analizy. 
 
 
 \begin{figure}[!h]
@@ -192,7 +191,7 @@ Poniższy harmonogram przedstawia planowany przebieg prac nad projektem i~ze wzg
 
 \section{Zespół}
 
-Planujemy oddać część pracy w~ręce zewnętrznych podwykonawców. Dlatego dokonujemy podziału zespołu na zespół stacjonarny i~niestacjonarny.
+Planujemy oddać część pracy w ręce zewnętrznych podwykonawców. Dlatego dokonujemy podziału zespołu na zespół stacjonarny i niestacjonarny.
 
 \subsection{Zespół stacjonarny}
 
@@ -211,7 +210,7 @@ Planujemy oddać część pracy w~ręce zewnętrznych podwykonawców. Dlatego do
 
 \section{Miesięczne wynagrodzenia brutto pracowników}
 
-Poniższa lista została sporządzona na bazie danych pochodzących z raportu \emph{Wynagrodzenia na stanowiskach IT w~2012 roku} wydanego przez kancelarię Sedlak \& Sedlak.\footnote{\url{http://wynagrodzenia.pl}} \\
+Poniższa lista została sporządzona na bazie danych pochodzących z raportu \emph{Wynagrodzenia na stanowiskach IT w 2012 roku} wydanego przez kancelarię Sedlak \& Sedlak.\footnote{\url{http://wynagrodzenia.pl}} \\
 
 \begin{tabular}{lr}
 programista C++ & 6500 zł \\
