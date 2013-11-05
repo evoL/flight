@@ -1,8 +1,11 @@
 \documentclass{mwrep}
 \usepackage{polski}
+\usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{tabularx}
+\usepackage{changepage}
+\usepackage{hyperref}
 
 \newcommand*{\titleGP}{\begingroup
 \centering
@@ -48,7 +51,7 @@
 \begin{tabularx}{1\textwidth}{|l|l|l|X|}
 \hline
 Data & Wersja & Autor & Opis zmian \\ \hline
-27.10.2013 & 1.0 & Zespół & Utworzenie dokumentu
+05.11.2013 & 1.0 & Zespół & Utworzenie dokumentu
 \end{tabularx}
 \end{center}
 \vspace{3ex}
@@ -143,7 +146,7 @@ Użytkownik będzie mógł sterować statkiem używając myszki, joysticka i~kla
 Osobną pomocą nawigacyjną jest automatyczna kontrola lotów. Będzie ona przeprowadzana w~trybie tekstowym w~angielskim języku lotniczym.
 
 \subsection{Inne pojazdy}
-Implementacji wymaga ruch służb lotniskowych, np. cystern, samochodów, holowników, itd. 
+Implementacji wymaga ruch służb lotniskowych, np. cystern, samochodów, holowników, itd.
 
 \subsection{Planowanie lotu}
 Ważnym elementem przed startem maszyny jest zaplanowanie lotu. Aplikacja będzie umożliwiała graficzne zaplanowanie trasy przelotu i~ilości paliwa.
@@ -170,5 +173,58 @@ Specjalne predefiniowane zadania do wykonania przez gracza. Za ich ukończenie p
 \section{Opis użytkownika}
 Z definicji gra jest dokładnym symulatorem i~jej celem nie jest zabawiać, tylko dokładnie modelować rzeczywistość. Od użytkownika oczekuje się precyzji, cierpliwości, opanowania, szybkiej reakcji, zdolności manualnych, jak i~chęci nauki oraz znajomości języka angielskiego.
 
+\chapter{Kosztorys}
+
+\section{Zespół}
+
+Planujemy oddać część pracy w ręce zewnętrznych podwykonawców. Dlatego dokonujemy podziału zespołu na zespół stacjonarny i niestacjonarny.
+
+\subsection{Zespół stacjonarny}
+
+\begin{itemize}
+\item 10 programistów C++
+\item 2 kierowników zespołów
+\item 4 testerów oprogramowania
+\end{itemize}
+
+\subsection{Zespół niestacjonarny}
+
+\begin{itemize}
+\item 2 grafików 2D
+\item 2 grafików 3D
+\end{itemize}
+
+\section{Miesięczne wynagrodzenia brutto pracowników}
+
+Poniższa lista została sporządzona na bazie danych pochodzących z raportu \emph{Wynagrodzenia na stanowiskach IT w 2012 roku} wydanego przez kancelarię Sedlak \& Sedlak.\footnote{\url{http://wynagrodzenia.pl}} \\
+
+\begin{tabular}{lr}
+programista C++ & 6500 zł \\
+kierownik zespołu & 8000 zł \\
+grafik 3D & 7400 zł \\
+grafik 2D & 3700 zł \\
+tester oprogramowania & 4200 zł
+\end{tabular}
+
+\section{Koszt utrzymania pracowników}
+
+\begin{tabular}{llr}
+programiści C++ & 20 miesięcy & 1 300 000 zł \\
+kierownik zespołu & 20 miesięcy & 160 000 zł \\
+graficy 3D & 13 miesięcy & 192 400 zł \\
+graficy 2D & 13 miesięcy & 96 200 zł \\
+testerzy & 20 miesięcy & 336 000 zł \\
+\hline
+\textbf{suma} && \textbf{2 084 600 zł}
+\end{tabular}
+
+\section{Koszt całkowity}
+
+\begin{tabular}{lr}
+wynagrodzenia & 2 084 600 zł \\
+bufor na nieprzewidziane wydatki & 40 000 zł \\
+\hline
+\textbf{suma} & \textbf{2 124 600 zł}
+\end{tabular}
 
 \end{document}
