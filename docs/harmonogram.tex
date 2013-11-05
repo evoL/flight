@@ -1,0 +1,75 @@
+\documentclass{mwrep}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{changepage}
+
+\newcommand*{\titleGP}{\begingroup
+\centering
+
+{\Large Studencka Pracownia Inżynierii Oprogramowania}\par
+\vspace*{16\baselineskip}
+
+{\LARGE Rafał Hirsz, Karol Wieczorek, Krzysztof Wróbel\par}
+\vspace*{\baselineskip}
+
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+\rule{\textwidth}{0.4pt}\\[\baselineskip]
+
+{\Huge SYMULATOR LOTU}\\[0.2\baselineskip]
+
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+\rule{\textwidth}{1.6pt}\\[\baselineskip]
+
+\scshape
+{\huge Wstępny harmonogram projektu}\par
+\vspace*{2\baselineskip}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=5\baselineskip]{flightsim-team-logo.pdf}
+\end{figure}
+\vfill
+
+{\large Wrocław 2013}\par
+
+\pagebreak
+
+\endgroup}
+
+\begin{document}
+
+\thispagestyle{empty}
+\titleGP
+
+\begin{center}
+\begin{table}[h]
+\begin{center}
+\begin{tabularx}{1\textwidth}{|l|l|l|X|}
+\hline
+Data & Wersja & Autor & Opis zmian \\ \hline
+3.11.2013 & 1.0 & Zespół & Utworzenie dokumentu
+\end{tabularx}
+\end{center}
+\vspace{3ex}
+\caption{Historia zmian dokumentu}\label{T:Zmiany}
+\end{table}
+\end{center}
+
+\pagebreak
+
+\tableofcontents
+
+\chapter{Wstęp}
+Harmonogram przedsięwzięcia został sporządzony przy użyciu powszechnie stosowanych metod szacowania rozmiaru i pracochłonności oprogramowania oraz w oparciu o wiedzę członków zespołu. Do wyznaczenia wielkości projektu użyto metody punktów funkcyjnych i na jej podstawie stwierdzono, że kod programu będzie miał ok. 50-70 tysięcy linii. Następnie przy pomocy metody COCOMO II obliczono przybliżoną pracochłonność całego projektu (wyniosła ok. 200 osobomiesięcy) oraz jego poszczególnych części składowych. Przy założeniu, że zespół programistów będzie liczył 10 osób, wykonanie oprogramowania powinno zająć niecałe dwa lata.
+Poniższy harmonogram przedstawia planowany przebieg prac nad projektem i ze względu na wczesną fazę prac jest obłożony dużą niedokładnością, jego dokładniejsza wersja powstanie w fazie analizy. 
+
+\chapter{Harmonogram}
+\begin{figure}[h]
+\centering
+\centerline{\includegraphics[scale=0.6]{harmonogram-tabela.pdf}}
+\caption{Wstępny harmonogram projektu}
+\end{figure}
+
+\end{document}
