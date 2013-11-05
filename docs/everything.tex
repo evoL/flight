@@ -85,7 +85,7 @@ Data & Wersja & Autor & Opis zmian \\ \hline
 \item[DME] - (ang. \emph{Distance Measuring Equipment}) radiowa pomoc nawigacyjna służąca do pomiaru fizycznej odległości pomiędzy samolotem a~stacją naziemną.
 \item[NDB] - (ang. \emph{Non-Directional Beacon}) naziemna radiolatarnia bezkierunkowa.
 \item[TCAS] - (ang. \emph{Traffic Alert and Collision Avoidance System}) pokładowy system zapobiegający zderzeniom statków powietrznych.
-\item[TAWS] - (ang. \emph{Terrain Awareness and Warning System}) urządzenie pokładowe ostrzegające pilotów o zbliżającej się powierzchni gruntu.
+\item[TAWS] - (ang. \emph{Terrain Awareness and Warning System}) urządzenie pokładowe ostrzegające pilotów o~zbliżającej się powierzchni gruntu.
 \end{description}
 
 \chapter{Specyfikacja produktu}
@@ -102,7 +102,7 @@ Podstawowym celem symulatora jest dokładne wymodelowanie zjawisk fizycznych. Ko
 
 \subsection{Modelowanie ruchu samolotu}
 
-Statek powietrzny jest w~sensie fizycznym bryłą sztywną o zmieniającym się w~czasie ruchu kształcie i~masie. Działają siły różnego pochodzenia. Można wsród nich wymienić:
+Statek powietrzny jest w~sensie fizycznym bryłą sztywną o~zmieniającym się w~czasie ruchu kształcie i~masie. Działają siły różnego pochodzenia. Można wsród nich wymienić:
 \begin{description}
 \item[Grawitacja ziemska] w~zależności od aktualnego położenia obiektu na Ziemi i~wysokości nad poziomem morza przyspieszenie ziemskie może mieć minimalnie różne wartości. Spowodowane to jest odległością od środka planety i~siły odśrodkowej wywołanej jej ruchem obrotowym.
 \item[Siła nośna] Skrzydła samolotu poruszające się w~ściśliwym płynie takim, jakim jest powietrze, generują siłę przeciwną do siły grawitacji. Pozwala to na unoszenie się obiektu nad Ziemią. Wartość siły nośnej zależy od profilu skrzydła, jego powierzchni, prędkości w~ośrodku, kąta natarcia, ciśnienia atmosferycznego, temperatury, wychylenia klap i~skrzeli (slotów). Obroty samolotu wokół jego osi są powodowane przez różnice w~sile nośnej generowanej przez poszczególne powierzchnie. Wychylanie lotek generuje różnice siły nośnej na skrzydłach, co jest przyczyną przechylania się maszyny na boki. Usterzenie na statecznikach pionowych i~poziomych obraca obiekt odpowiednio w~osi pionowej i~wdłuż skrzydeł. Pozycja poszczególnych powierzchni sterujących może być zachowana poprzez użycie trymeru.
@@ -124,11 +124,11 @@ Oferowane będą trzy tryby pogody.
 \item Warunki aktualne (pobierane z~zewnętrznych zasobów).
 \end{itemize}
 
-\noindent W każdym z~przypadków, wpływ na rzeczywiste odczyty temperatury, wilgotności i~ciśnienia ma wysokość, na której znajduje się obiekt.
+\noindent w~każdym z~przypadków, wpływ na rzeczywiste odczyty temperatury, wilgotności i~ciśnienia ma wysokość, na której znajduje się obiekt.
 
 
 \subsection{Wykrywanie kolizji}
-Ze względów etycznych, po rozbiciu samolotu zostanie wygenerowany jedynie komunikat mówiący o jego zniszczeniu. Nieprzewidywane są żadne animacje katastrofy i~wraku. Kolizje z~terenem poza miejscem lądowania będą wykrywane mniej dokładnie oraz będą od razu przerywały symulację lotu. W~przypadku lotnisk informacja o kolizji będzie wyświetlana w~wyniku przeciążenia podwozia lub dotknięcia ziemi innym elementem maszyny. Zarówno zbliżenia do terenu lotniska, jak i~do innych obiektów będą symulowane z~najwyższą szczegółowością.
+Ze względów etycznych, po rozbiciu samolotu zostanie wygenerowany jedynie komunikat mówiący o~jego zniszczeniu. Nieprzewidywane są żadne animacje katastrofy i~wraku. Kolizje z~terenem poza miejscem lądowania będą wykrywane mniej dokładnie oraz będą od razu przerywały symulację lotu. W~przypadku lotnisk informacja o~kolizji będzie wyświetlana w~wyniku przeciążenia podwozia lub dotknięcia ziemi innym elementem maszyny. Zarówno zbliżenia do terenu lotniska, jak i~do innych obiektów będą symulowane z~najwyższą szczegółowością.
 
 \subsection{Dane techniczne samolotów}
 Program ma umożliwiać korzystanie z~różnych modeli samolotów. Niekoniecznie muszą one być dostarczone przez wytwórce symulatora. Dane konfiguracyjne powinny spełniać specyfikację ze strony \linebreak \url{http://msdn.microsoft.com/en-us/library/cc526949.aspx} .
@@ -179,8 +179,8 @@ Z definicji gra jest dokładnym symulatorem i~jej celem nie jest zabawiać, tylk
 \chapter{Harmonogram}
 
 \section{Opis}
-Harmonogram przedsięwzięcia został sporządzony przy użyciu powszechnie stosowanych metod szacowania rozmiaru i pracochłonności oprogramowania oraz w oparciu o wiedzę członków zespołu. Do wyznaczenia wielkości projektu użyto metody punktów funkcyjnych i na jej podstawie stwierdzono, że kod programu będzie miał ok. 50-70 tysięcy linii. Następnie przy pomocy metody COCOMO II obliczono przybliżoną pracochłonność całego projektu (wyniosła ok. 180 osobomiesięcy) oraz jego poszczególnych części składowych. Do tego wyniku dodano 20 osobomiesięcy buforu związanego z urlopami pracowników i innymi niemożliwymi do przewidzenia zdarzeniami. Przy założeniu, że zespół programistów będzie liczył 10 osób, wykonanie oprogramowania powinno zająć niecałe dwa lata.
-Poniższy harmonogram przedstawia planowany przebieg prac nad projektem i ze względu na wczesną fazę prac jest obłożony dużą niedokładnością, jego dokładniejsza wersja powstanie w fazie analizy. 
+Harmonogram przedsięwzięcia został sporządzony przy użyciu powszechnie stosowanych metod szacowania rozmiaru i~pracochłonności oprogramowania oraz w~oparciu o~wiedzę członków zespołu. Do wyznaczenia wielkości projektu użyto metody punktów funkcyjnych i~na jej podstawie stwierdzono, że kod programu będzie miał ok. 50-70 tysięcy linii. Następnie przy pomocy metody COCOMO~II obliczono przybliżoną pracochłonność całego projektu (wyniosła ok. 180 osobomiesięcy) oraz jego poszczególnych części składowych. Do tego wyniku dodano 20 osobomiesięcy buforu związanego z urlopami pracowników i~innymi niemożliwymi do przewidzenia zdarzeniami. Przy założeniu, że zespół programistów będzie liczył 10 osób, wykonanie oprogramowania powinno zająć niecałe dwa lata.
+Poniższy harmonogram przedstawia planowany przebieg prac nad projektem i~ze względu na wczesną fazę prac jest obłożony dużą niedokładnością, jego dokładniejsza wersja powstanie w~fazie analizy. 
 
 
 \begin{figure}[!h]
@@ -192,7 +192,7 @@ Poniższy harmonogram przedstawia planowany przebieg prac nad projektem i ze wzg
 
 \section{Zespół}
 
-Planujemy oddać część pracy w ręce zewnętrznych podwykonawców. Dlatego dokonujemy podziału zespołu na zespół stacjonarny i niestacjonarny.
+Planujemy oddać część pracy w~ręce zewnętrznych podwykonawców. Dlatego dokonujemy podziału zespołu na zespół stacjonarny i~niestacjonarny.
 
 \subsection{Zespół stacjonarny}
 
@@ -211,7 +211,7 @@ Planujemy oddać część pracy w ręce zewnętrznych podwykonawców. Dlatego do
 
 \section{Miesięczne wynagrodzenia brutto pracowników}
 
-Poniższa lista została sporządzona na bazie danych pochodzących z raportu \emph{Wynagrodzenia na stanowiskach IT w 2012 roku} wydanego przez kancelarię Sedlak \& Sedlak.\footnote{\url{http://wynagrodzenia.pl}} \\
+Poniższa lista została sporządzona na bazie danych pochodzących z raportu \emph{Wynagrodzenia na stanowiskach IT w~2012 roku} wydanego przez kancelarię Sedlak \& Sedlak.\footnote{\url{http://wynagrodzenia.pl}} \\
 
 \begin{tabular}{lr}
 programista C++ & 6500 zł \\
