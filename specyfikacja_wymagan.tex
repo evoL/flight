@@ -1,0 +1,143 @@
+\documentclass{mwrep}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{tgbonum}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\setlength{\parindent}{0cm}
+\addto\captionspolish{\renewcommand{\tablename}{Tabela}}
+
+\newcommand*{\titleGP}{\begingroup
+\centering
+
+{\large Studencka Pracownia Inżynierii Oprogramowania}\\Instytut Informatyki Uniwersytetu Wrocławskiego\par
+\vspace*{16\baselineskip}
+
+{\Large Rafał Hirsz, Karol Wieczorek, Krzysztof Wróbel\par}
+\vspace*{\baselineskip}
+
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+\rule{\textwidth}{0.4pt}\\[\baselineskip]
+
+{\Huge SYMULATOR LOTU}\\[0.2\baselineskip]
+
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+\rule{\textwidth}{1.6pt}\\[\baselineskip]
+
+\scshape
+{\huge Specyfikcja wymagań}\par
+\vspace*{2\baselineskip}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=5\baselineskip]{flightsim-team-logo.pdf}
+\end{figure}
+\vfill
+
+{\large Wrocław 2013}\par
+
+\pagebreak
+
+\endgroup}
+
+\begin{document}
+
+\thispagestyle{empty}
+\titleGP
+
+\begin{center}
+\begin{table}[h]
+\begin{center}
+\begin{tabularx}{1\textwidth}{|l|l|l|X|}
+\hline
+Data & Wersja & Autor & Opis zmian \\ \hline
+2013-11-30 & 1.0 & Krzysztof Wróbel & Utworzenie dokumentu \\
+\hline
+\end{tabularx}
+\end{center}
+\vspace{3ex}
+\caption{Historia zmian dokumentu}\label{T:Zmiany}
+\end{table}
+\end{center}
+
+\pagebreak
+
+\tableofcontents
+
+\chapter{Charakterystyka użytkowników}
+
+Symulator jest grą komputerową przeznaczoną dla zarówno dla użytkowników z zerową wiedzą o lotnictwie, jak i dla profesjonalnych pilotów. W zależności od stopnia wtajemniczenia gracza w zagadnienia awioniki oferuje różne funkcje dostosowane do jego umiejętności.
+
+\section{Nowicjiusz}
+
+Scenariusz gry dla osoby nieposiadającej wiedzy z zakresu lotnictwa przewiduje lekcje podstawowych technik pilotażu lekkich samolotów. Lekcje dotyczą startu i lądowania, lotu poziomego, zakrętów, podchodzenia do lądowania i kołowania. Dostępne są także podstawowe misje zręczonościowe oraz swobodny lot.
+
+\section{Entuzjasta lotnictwa}
+
+Zakłada się, że entuzjaści lotnictwa chcą maksymalnie zgłębić swoją wiedzę o pilotażu. Grupie tej oferowany jest pełny cykl artykułów, samouczków i lekcji z następujących dziedzin: ogólna wiedza o samolocie, prawo lotnicze, zasady ruchu lotniczego, osiągi i planowanie lotu, meteorologia, nawigacja, procedury operacyjne, zasady lotu, łączność oraz ogólne bezpieczeństwo lotu. Przygotowane są misje o narastającym poziomie trudności. Przewiduje się, że po ukończeniu kursu entuzjaści będą w stanie wykonać zadania przeznaczone dla pilotów w realnym świecie.
+
+\section{Pilot w realnym świecie}
+
+Program z założenia ma jak najbardziej symulować rzeczywisty lot. Przy jego pomocy użytkownicy z licencją pilota w ręku mogą się cieszyć realną symulacją przy nieporównywalnie niższych kosztach od podróży samolotem lub wynajęcia prawdziwego symulatora. Gracze mogą sprawdzić swoje umiejętności przy każdych warunkach pogodowych w każdym miejscu na Ziemii. Dodatkowo zaaranżowane mogą zostać nieprzewidziane usterki oraz problemy z pasażerami na pokładzie. Licencjonowany pilot będzie używał wszystkich elementów gry. W szczególności jest tutaj mowa o dokładnym zaplanowaniu trasy lotu i załadowania samolotu, manewrach na lotnisku, kontroli lotów, nawigowaniu, przestrzeganiu procedur lotniczych, używaniu map, schematów oraz checklist. Dla tej grupy graczy przygotowane są skomplikowane misje przedstawiające sytuacje z życia zawodowych pilotów.
+
+\chapter{Wymagania funkcjonalne}
+
+\section{Konfiguracja gry}
+
+\subsection{Konfiguracja swobodnego lotu}
+
+Przed rozpoczęciem symulacji swobodnego lotu należy określić:
+\begin{itemize}
+\item używany samolot,
+\item miejsce startu,
+\item czas startu,
+\item warunki pogodowe
+\end{itemize}
+oraz opcjonalnie:
+\begin{itemize}
+\item ładunek samolotu,
+\item plan lotu,
+\item ewentualne usterki.
+\end{itemize}
+
+\subsubsection{Wybór samolotu}
+Gracz wybiera samolot na podstawie jego wytwórcy (np. Boeing), rodziny (np. 737) i modelu (np. 737-800). Może wybrać także jego malowanie (jeżeli jest dostępne więcej niż jedno). Podczas wyborania maszyny gracz powinien być poinformowany o jej podsawowych osiągach. Wybór przedstawiany jest graficznie.
+
+\subsubsection{Wybór miejsca startu}
+Użytkownik określa lotnisko, z którego ma się rozpocząć symulacja. Dostępne są następujące kryteria wyszykiwania:
+\begin{itemize}
+\item państwo (np. Grecja),
+\item miasto (np. Londyn),
+\item nazwa lotniska (np. Okęcie),
+\item kod lotniska IATA (np. KRK),
+\item kod lotniska ICAO (np. VHHH).
+\end{itemize}
+Dodatkowo na obszarze danego lotniska należy dospecyfikować miejsce startu symulacji, np.:
+\begin{itemize}
+\item pas startowy 18L,
+\item pas startowy 36R,
+\item bramka 12,
+\item stanowisko odladzania,
+\item hangar C.
+\end{itemize}
+Podane miejsca zależą od konkretnego portu lotniczego.
+
+\subsubsection{Wybór czasu startu}
+Symulacji wymaga określenia czasu jej startu (tj. daty i godziny).
+
+\subsubsection{Wybór warunków pogodowych}
+Użytkownik ma do wyboru następujące scenariusze pogodowe:
+\begin{itemize}
+\item predefiniowany - wybiera się konkretny zestaw zjawisk atmosferycznych (np. mroźny, bezchmurny dzień lub ulewny deszcz),
+\item odpowiedni miejscu i porze symulacji - jest określana na podstawie klimatu miejsca startu,
+\item aktualizowany - pogoda jest aktualizowana na bieżące na podstawie zewnętrznych źródeł.
+\end{itemize}
+
+\subsubsection{Określenie ładunku samolotu}
+
+
+
+\end{document}
