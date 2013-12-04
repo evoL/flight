@@ -7,6 +7,7 @@
 \usepackage{tabularx}
 \usepackage{hyperref}
 
+\renewcommand{\labelitemi}{$\bullet$}
 \setlength{\parindent}{0cm}
 \addto\captionspolish{\renewcommand{\tablename}{Tabela}}
 
@@ -81,7 +82,7 @@ Zakłada się, że entuzjaści lotnictwa chcą maksymalnie zgłębić swoją wie
 
 \section{Pilot w realnym świecie}
 
-Program z założenia ma jak najbardziej symulować rzeczywisty lot. Przy jego pomocy użytkownicy z licencją pilota w ręku mogą się cieszyć realną symulacją przy nieporównywalnie niższych kosztach od podróży samolotem lub wynajęcia prawdziwego symulatora. Gracze mogą sprawdzić swoje umiejętności przy każdych warunkach pogodowych w każdym miejscu na Ziemii. Dodatkowo zaaranżowane mogą zostać nieprzewidziane usterki oraz problemy z pasażerami na pokładzie. Licencjonowany pilot będzie używał wszystkich elementów gry. W szczególności jest tutaj mowa o dokładnym zaplanowaniu trasy lotu i załadowania samolotu, manewrach na lotnisku, kontroli lotów, nawigowaniu, przestrzeganiu procedur lotniczych, używaniu map, schematów oraz checklist. Dla tej grupy graczy przygotowane są skomplikowane misje przedstawiające sytuacje z życia zawodowych pilotów.
+Program z założenia ma jak najbardziej symulować rzeczywisty lot. Przy jego pomocy użytkownicy z licencją pilota w ręku mogą się cieszyć realną symulacją przy nieporównywalnie niższych kosztach od podróży samolotem lub wynajęcia prawdziwego symulatora. Gracze mogą sprawdzić swoje umiejętności przy każdych warunkach pogodowych w każdym miejscu na Ziemi. Dodatkowo zaaranżowane mogą zostać nieprzewidziane usterki oraz problemy z pasażerami na pokładzie. Licencjonowany pilot będzie używał wszystkich elementów gry. W szczególności jest tutaj mowa o dokładnym zaplanowaniu trasy lotu i załadowania samolotu, manewrach na lotnisku, kontroli lotów, nawigowaniu, przestrzeganiu procedur lotniczych, używaniu map, schematów oraz list kontrolnych. Dla tej grupy graczy przygotowane są skomplikowane misje przedstawiające sytuacje z życia zawodowych pilotów.
 
 \chapter{Wymagania funkcjonalne}
 
@@ -131,13 +132,68 @@ Symulacji wymaga określenia czasu jej startu (tj. daty i godziny).
 \subsubsection{Wybór warunków pogodowych}
 Użytkownik ma do wyboru następujące scenariusze pogodowe:
 \begin{itemize}
-\item predefiniowany - wybiera się konkretny zestaw zjawisk atmosferycznych (np. mroźny, bezchmurny dzień lub ulewny deszcz),
-\item odpowiedni miejscu i porze symulacji - jest określana na podstawie klimatu miejsca startu,
-\item aktualizowany - pogoda jest aktualizowana na bieżące na podstawie zewnętrznych źródeł.
+\item predefiniowany -- wybiera się konkretny zestaw zjawisk atmosferycznych (np. mroźny, bezchmurny dzień lub ulewny deszcz),
+\item odpowiedni miejscu i porze symulacji -- jest określana na podstawie klimatu miejsca startu,
+\item aktualizowany -- pogoda jest aktualizowana na bieżące na podstawie zewnętrznych źródeł.
 \end{itemize}
 
 \subsubsection{Określenie ładunku samolotu}
+Określenie ładunku samolotu składa się na podanie:
+\begin{itemize}
+\item liczby i rozmieszczenia pasażerów,
+\item ilości i rozmieszczenia bagaży,
+\item ilości i rozmieszczenia ładunku cargo,
+\item ilości i rozmieszczenia paliwa.
+\end{itemize}
 
+\subsubsection{Stworzenie planu lotu}
+W celu stworzenia planu lotu gracz musi podać następujące informacje:
+\begin{itemize}
+\item lotnisko docelowe -- wybierane w podobny sposób, co lotnisku startu,
+\item tryb lotu:
+\begin{itemize}
+\item lot IFR,
+\item lot VFR,
+\end{itemize}
+\item rodzaj nawigacji:
+\begin{itemize}
+\item na podstawie VOR i NDB,
+\item korytarzami powietrznymi na niskiej wysokości,
+\item korytarzami powietrznymi na wysokiej wysokości,
+\item trasa bezpośrednia.
+\end{itemize}
+\end{itemize}
+Wygenerowany plan lotu może zostać wydrukowany.
+
+\subsubsection{Określenie usterek samolotu}
+Gracz może wymusić, by podczas symulacji pojawiły się konkretne awarie poniższych typów:
+\begin{itemize}
+\item awarie przyrządów (np. wysokościomierza, sztucznego horyzontu),
+\item awarie systemów (np. elektrycznego, próżniowego),
+\item awarie radia,
+\item awarie silników.
+\end{itemize}
+Dodatkowo istnieje możliwość spowodowania losowej usterki.
+
+\subsection{Wybór misji}
+
+Użytkownik ma możliwość wyboru konkretnego zadania do wykonania podczas symulacji, tzw. misji. Nazwy misji są posortowane według stopnia trudności. W podglądzie jest widoczny krótki opis i szacowany czas ukończenia. Po wybraniu misji graczowi przedstawiane są szczegóły, mapy i diagramy potrzebne do jej przejścia. Podczas wyboru misji nie ma miejsca konfiguracja swobodnego lotu.
+
+\subsection{Szkoła}
+W szkole dostępne są lekcje pilotażu w formie pisemnej (strony HTML) i w formie symulacji (podobnie do misji).
+
+\subsection{Biblioteka}
+Biblioteka jest bazą dokumentów potrzebnych pilotom do prowadzenia samolotów. W bibliotece znajdują się:
+\begin{itemize}
+\item instrukcje obsługi samolotów,
+\item listy kontrolne,
+\item schematy lotnisk,
+\item schematy podejścia,
+\item mapy stref przylotniskowych,
+\item mapy przestrzeni powietrznych.
+\end{itemize}
+
+Dokumenty dotyczące samolotów powinny być wyszukiwane według modelu samolotu, dotyczące lotnisk -- według nazw miejscowości, lotniska lub kodu lotniska, natomiast mapy przestrzeni powietrznych -- według kraju.
 
 
 \end{document}
