@@ -55,7 +55,7 @@
 \begin{tabularx}{1\textwidth}{|l|l|l|X|}
 \hline
 Data & Wersja & Autor & Opis zmian \\ \hline
-2013-11-30 & 1.0 & Krzysztof Wróbel & Utworzenie dokumentu \\
+2013-12-11 & 1.0 & Krzysztof Wróbel & Utworzenie dokumentu \\
 \hline
 \end{tabularx}
 \end{center}
@@ -132,9 +132,9 @@ Symulacja wymaga określenia czasu jej startu (tj. daty i godziny).
 \subsubsection{Wybór warunków pogodowych}
 Użytkownik ma do wyboru następujące scenariusze pogodowe:
 \begin{itemize}
-\item predefiniowany - wybiera się konkretny zestaw zjawisk atmosferycznych (np. mroźny, bezchmurny dzień lub ulewny deszcz),
-\item odpowiedni dla miejsca i pory symulacji - pogoda jest określana na podstawie klimatu miejsca startu,
-\item aktualizowany - pogoda jest aktualizowana na bieżące na podstawie zewnętrznych źródeł.
+\item predefiniowany -- wybiera się konkretny zestaw zjawisk atmosferycznych (np. mroźny, bezchmurny dzień lub ulewny deszcz),
+\item odpowiedni dla miejsca i pory symulacji -- pogoda jest określana na podstawie klimatu miejsca startu,
+\item aktualizowany -- pogoda jest aktualizowana na bieżące na podstawie zewnętrznych źródeł.
 \end{itemize}
 
 \subsubsection{Określenie ładunku samolotu}
@@ -195,5 +195,108 @@ Biblioteka jest bazą dokumentów potrzebnych pilotom do prowadzenia samolotów.
 
 Dokumenty dotyczące samolotów powinny być wyszukiwane według modelu samolotu, dotyczące lotnisk -- według nazw miejscowości, lotniska lub kodu lotniska, natomiast mapy przestrzeni powietrznych -- według kraju.
 
+\section{Symulacja lotu}
+
+\subsection{Sterowanie}
+
+W tabeli \ref{T:Sterowanie_klawiatura} zestawiono klawisze i skutki ich naciśnięcia. W tabeli \ref{T:Sterowanie_joystickiem} przedstawiono zdarzenia towarzyszące danym ruchom joysticka.\\
+Symulator umożliwia dodatkowo sterowanie myszą. Klikanie w konkretne elementy kokpitu skutkuje tym samym, jak gdyby zostały one naciśnięte palcem w realnym samolocie.
+
+\begin{center}
+\begin{table}[ht]
+\begin{center}
+\begin{tabularx}{1\textwidth}{|l|X|}
+\hline
+Klawisz(e) & Skutek \\ \hline
+\texttt{Esc} & Zakończenie symulacji \\
+\texttt{P} & Pauza \\
+\texttt{F1} & Ciąg zerowy \\
+\texttt{F2} & Zmniejszenie ciągu \\
+\texttt{F3} & Zwiększenie ciągu \\
+\texttt{F4} & Ciąg maksymalny \\
+\texttt{F5} & Schowanie klap i skrzeli \\
+\texttt{F6} & Stopniowe chowanie klap i skrzeli \\
+\texttt{F7} & Stopniowe wysuwanie klap i skrzeli \\
+\texttt{F8} & Całkowite wysunięcie klap i skrzeli \\
+\texttt{F9} & Widok zza samolotu \\
+\texttt{F10} & Widok w dół \\
+\texttt{F11} & Widok przodu samolotu \\
+\texttt{F12} & Widok z kokpitu \\
+\texttt{`} & Otwarcie/zamknięcie okna kontroli lotów \\
+\texttt{1} & Otwarcie szczegółowego widoku sztucznego horyzontu \\
+\texttt{2} & Otwarcie szczegółowego widoku przepustnic \\
+\texttt{3} & Otwarcie szczegółowego widoku GPS \\
+\texttt{4} & Otwarcie szczegółowego widoku radia \\
+\texttt{5} & Otwarcie szczegółowego widoku panelu górnego \\
+\texttt{/} & Wysunięcie/schowanie spojlerów \\
+\texttt{.} & Zaciśnięcie/zwolnienie hamulców \\
+\texttt{Z} & Włączenie/wyłączenie autopilota \\
+\texttt{L} & Włączenie/wyłączenie świateł lądowania \\
+\texttt{G} & Wysunięcie/schowanie podwozia \\
+\texttt{E} & Uruchomienie silników \\
+Strzałki & Poruszanie kamerą \\
+\hline
+\end{tabularx}
+\end{center}
+\vspace{3ex}
+\caption{Sterowanie klawiaturą}\label{T:Sterowanie_klawiatura}
+\end{table}
+\end{center}
+
+\begin{center}
+\begin{table}[ht]
+\begin{center}
+\begin{tabularx}{1\textwidth}{|l|X|}
+\hline
+Zdarzenie & Skutek \\ \hline
+Wychylenie do przodu & Opuszczenie krawędzi spływu statecznika poziomego \\
+Wychylenie do tyłu & Opuszczenie krawędzie natarcia statecznika poziomego \\
+Wychylenie w prawo & Wychylenie lotek na prawym i lewym skrzydle odpowiednio do dołu i do góry \\
+Wychylenie w prawo & Wychylenie lotek na prawym i lewym skrzydle odpowiednio do góry i do dołu \\
+Obrót w prawo & Wychylenie lotki na stateczniku pionowym w prawo \\
+Obrót w lewo & Wychylenie lotki na stateczniku pionowym w lewo \\
+\hline
+\end{tabularx}
+\end{center}
+\vspace{3ex}
+\caption{Sterowanie joystickiem}\label{T:Sterowanie_joystickiem}
+\end{table}
+\end{center}
+
+\subsection{Kontrola lotów}
+
+Kontrola lotów prowadzona jest w osobnym oknie dialogowym w trybie tekstowym. Językiem komunikatów jest język angielski. Graczowi są proponowane wypowiedzi, które po wyborze są przekazywane kontrolerowi. Kontrola lotów jest zaimplementowana zgodnie z tekstem \emph{Ustawy z dnia 3 lipca 2002 r. -- Prawo lotnicze} z późniejszymi poprawkami.
+
+\chapter{Wymagania niefunkcjonalne}
+
+\section{Realizm}
+\subsection{Realizm fizyczny}
+Kładzie się nacisk na dokładność realizacji silnika fizycznego. Obliczony tor ruchu bryły sztywnej, na którą działają siły zewnętrzne powinien w możliwie najmniejszym stopniu różnić się od teoretycznego modelu newtonowskiego.\\
+Działanie poszczególnych części samolotu powinno być według najprecyzyjniejszych znanych modeli.
+\subsection{Realizm graficzny}
+Należy dokładnie wyrenderować modele samolotów, lotnisk, terenu, naziemnych pomocy nawigacyjnych, budynków, jaki i urządzeń wewnątrz kokpitu.
+
+\section{Niezawodność}
+Zakłada się, że gracze będą chcieli odtwarzać najdłuższe możliwe przy aktualnej technologii loty, dlatego też program powinien być w stanie pracować przez okres do 48 godzin.
+
+\section{Interfejsy programu}
+Gracz, aby korzystać ze wszystkich funkcji symulatora, powinien posiadać sprawne łącze internetowe.
+
+\section{Interfejs sprzętowy}
+Minimalne wymagania:
+\begin{itemize}
+\item procesor: 1.33 GHz,
+\item RAM: 1 GB,
+\item karta graficzna: 128 MB,
+\item miejsce na dysku twardym: 4 GB
+\end{itemize}
+\vspace{1ex}
+Zalecane wymagania:
+\begin{itemize}
+\item procesor: dwurdzeniowy 2.0 GHz,
+\item RAM: 4 GB,
+\item karta graficzna: 256 MB,
+\item miejsce na dysku twardym: 4 GB
+\end{itemize}
 
 \end{document}
