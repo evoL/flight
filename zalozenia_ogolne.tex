@@ -6,6 +6,8 @@
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{hyperref}
+\usepackage{rotating}
+
 
 \setlength{\parindent}{0cm}
 \addto\captionspolish{\renewcommand{\tablename}{Tabela}}
@@ -189,24 +191,81 @@ Z definicji gra jest dokładnym symulatorem i~jej celem nie jest zabawiać, tylk
 Harmonogram ,,Symulatora lotu'' został sporządzony przy użyciu powszechnie stosowanych metod szacowania rozmiaru i~pracochłonności oprogramowania oraz na podstawie wiedzy członków zespołu. Do wyznaczenia wielkości projektu użyto metody punktów funkcyjnych i~na jej podstawie stwierdzono, że kod programu będzie miał ok. 50-60 tysięcy wierszy. Następnie, za pomocą metody COCOMO~II obliczono przybliżoną pracochłonność całego projektu (wyniosła ok. 180 osobomiesięcy) oraz jego poszczególnych części składowych. Do tego wyniku dodano 20 osobomiesięcy buforu związanego z urlopami pracowników i~innymi niemożliwymi do przewidzenia zdarzeniami. Przy założeniu, że zespół programistów będzie liczył 10 osób, wykonanie oprogramowania powinno zająć niecałe dwa lata.
 Poniższy harmonogram przedstawia planowany przebieg prac nad projektem i~ze względu na wczesną fazę prac jest obłożony dużą niedokładnością. Jego dokładniejsza wersja powstanie w~fazie analizy.
 
-\vspace{2cm}
+\begin{sidewaystable}
+    \begin{center}
+        \begin{tabular}{|p{7cm}|r|r|r|r|r|} \hline
+            \multicolumn{1}{|m{7cm}|}{\centering Funkcja}                                                                        &
+            \multicolumn{1}{m{2,5cm}|}{\centering Koszt w punktach funkcyjnych}                                                  &
+            \multicolumn{1}{m{4cm}|}{\centering Koszt w punktach funkcyjnych po uwzględnieniu wsp. wpływu}                       &
+            \multicolumn{1}{m{2,5cm}|}{\centering Liczba wierszy kodu}                                                           &
+            \multicolumn{1}{m{2,5cm}|}{\centering Osobomiesiące}                                                                 &
+            \multicolumn{1}{m{4cm}|}{\centering Osobomiesiące z uwzględnieniem buforu na nieprzewidziane zdarzenia}              \\ \hline
 
-\begin{figure}[!h]
-    \centerline{\includegraphics*[scale=0.70]{punkty-funkcyjne-crop.pdf}}
+            implementacja silnika fizyki                                        & 118     & 112     & 5935     & 20,49   & 22,78 \\
+            implementacja warunków pogodowych                                   & 124     & 118     & 6257     & 21,70   & 24,13 \\
+            wyświetlanie warunków pogodowych                                    & 49      & 47      & 2484     & 7,93    & 8,81  \\
+            implementacja i wyświetlanie zmiennych warunków pogodowych          & 58      & 55      & 2898     & 9,38    & 10,43 \\
+            implementacja podstawowego silnika lotu                             & 57      & 54      & 2852     & 9,22    & 10,24 \\
+            implementacja podstawowego silnika graficznego                      & 62      & 59      & 3128     & 10,19   & 11,33 \\
+            wykrywanie kolizji                                                  & 51      & 49      & 2576     & 8,25    & 9,17  \\
+            wczytywanie i wyświetlanie map                                      & 98      & 93      & 4923     & 16,71   & 18,58 \\
+            implementacja infrastruktury pomocniczej                            & 92      & 88      & 4647     & 15,69   & 17,44 \\
+            wyświetlanie infrastruktury pomocniczej                             & 45      & 43      & 2254     & 7,13    & 7,93  \\
+            implemantacja interfejsu użytkownika                                & 59      & 56      & 2990     & 9,70    & 10,79 \\
+            implementacja obługi alternatywnych kontrolerów                     & 45      & 43      & 2254     & 7,13    & 7,93  \\
+            wczytywaie modeli samolotów                                         & 101     & 95      & 5061     & 17,22   & 19,15 \\
+            implementacja lądowania                                             & 107     & 102     & 5383     & 18,42   & 20,48 \\
+            \hline
+            \hfill suma                                                         & 1065    & 1012    & 53642    & 179,17  & 199,17\\ \hline
+        \end{tabular}
+    \end{center}
     \caption{Koszt poszczególnych etapów kontrukcji oprogramowania}
-\end{figure}
+\end{sidewaystable}
 
-\begin{figure}[!h]
-    \centerline{\includegraphics*[scale=1]{punkty-funkcyjne-wsp-wplywu-crop.pdf}}
+\begin{table}
+    \begin{center}
+        \begin{tabular}{|p{10cm}|r|} \hline
+        \multicolumn{1}{|m{10cm}|}{\centering Współczynniki wpływu }                                           &
+        \multicolumn{1}{m{2cm}|}{\centering Punkty}                                                            \\ \hline
+
+        Czy wymagane jest przesyłanie danych?                                                           & 4    \\
+        Czy są funkcje przetwarzania rozproszonego?                                                     & 0    \\
+        Czy wydajność ma kluczowe znaczenie?                                                            & 4    \\
+        Czy system ma działać w mocno obciążonym środowisku operacyjnym?                                & 3    \\
+        Czy system wymaga wprowadzania danych online?                                                   & 0    \\
+        Czy wewnętrzne przetwarzanie danych jest złożone?                                               & 5    \\
+        Czy kod ma być przystosowany do ponownego użycia?                                               & 2    \\
+        Czy wejścia, wyjścia, pliki i zapytania są złożone?                                             & 3    \\
+        Czy wprowadzenie danych on-line wymaga transakcji obejmujących wiele ekranów lub operacji?      & 3    \\
+        Czy pliki główne są aktualizowane  on-line?                                                     & 2    \\
+        Czy system ma mieć automatyczne konwersje i instalacje?                                         & 4    \\
+        Czy system wymaga mechanizmu kopii zapasowych i odtwarzania?                                    & 3    \\
+        Czy system jest projektowany dla wielu instalacji w różnych organizacjach?                      & 4    \\
+        Czy aplikacja jest projektowana aby wspomagać zmiany i być łatwą w użyciu przez użytkownika?    & 2    \\ \hline
+        \hfill Suma                                                                                     & 39   \\ \hline
+        \hfill Współczynnik wpływu                                                                      & 0,95 \\ \hline
+
+        \end{tabular}
+    \end{center}
     \caption{Współczynniki wpływu dla metody punktów funkcyjnych}
-\end{figure}
+\end{table}
 
-\begin{figure}[!h]
-    \centerline{\includegraphics*[scale=1]{wsp-cocomo-crop.pdf}}
+\begin{table}
+    \begin{center}
+        \begin{tabular}{|l|l|} \hline
+        \multicolumn{1}{|m{10cm}|}{\centering Współczynniki COCOMO II } &
+        \multicolumn{1}{m{2cm}|}{\centering Punkty}                    \\ \hline
+        Typowość                        & 4,96 \\
+        Elastyczność                    & 3,04 \\
+        Zarządzanie ryzykiem            & 4,24 \\
+        Spójność zespołu                & 1,1  \\
+        Dojrzałość procesu wytwarzania  & 4,68 \\ \hline
+        \end{tabular}
+    \end{center}
     \caption{Współczynniki dla metody COCOMO II}
-\end{figure}
+\end{table}
 
-\begin{figure}[!h]
+\begin{figure}
 	\centerline{\includegraphics*[scale=0.8]{harmonogram-tabela.pdf}}
 	\caption{Harmonogram projektu}
 \end{figure}
