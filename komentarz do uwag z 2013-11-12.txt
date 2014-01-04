@@ -1,0 +1,13 @@
+Komentarz do uwag do Założeń ogólnych z dnia 12.11.2013 r.
+
+- W "Słowniku pojęć" hasło "System odniesienia WGS-84" jest poprawne (por. http://pl.wikipedia.org/wiki/System_odniesienia_WGS_84). Nie istnieje termin "System wzorowy WGS-84).
+
+- W "2.2.2. Modelowanie ruchu samolotu" w opisie siły nośnej "... w ściśliwym płynie ..." - powietrze jest płynem. W tym zdaniu chodzi o nadmienienie, że powietrze łatwo może "opływać" samolot. Jest to zgodne z definicją płynu ("Płyn – każda substancja, która może płynąć, tj. charakteryzuje się wielką łatwością zmieniania wzajemnego położenia poszczególnych elementów nawet dla niewielkich sił, w przeciwieństwie do ciał stałych, które przy niewielkich siłach wykazują proporcjonalność odkształcenia do naprężeń. W wyniku czego płyn może swobodnie przemieszczać się (przepływać). Pojęcia płynu nie należy utożsamiać tylko z cieczą, gdyż płynami są nie tylko ciecze, ale także wszystkie gazy, a nawet takie mieszaniny różnych faz fizycznych jak piana, emulsja, zawiesina i pasta." - źrodło: Wikipedia).
+
+- W "2.2.2. Modelowanie ruchu samolotu" w opisie kontaktu z podłożem "Przyziemienie powoduje przyłożenie do kadłuba siły skierowanej pionowo w górę". Zgodnie z trzecią zasadą dynamiki Newtona w trakcie przyziemienia Ziemia działa na samolot z taką samą siłą, jak samolot działa na Ziemię, tylko o przeciwnym zwrocie. Działanie samolotu nie jest symulowane, ponieważ uznajemy Ziemię za nieskonczenie dużą masę, ale siła reakcji Ziemi powoduje wyhamowanie prędkości pionowej samolotu.
+
+- W "2.3.1. Wolny lot" nazwa sekcji nie może nazywać się "swobodny lot", ponieważ wskazywałoby to na lot bez włączonych silników, lot szybowcem lub skok spadochronowy.
+
+- W "2. 3. 4. Misje" "trofea" są symbolicznymi nagrodami w formie obrazków (np. okulary pilotki) za określone osiągnięcia. Termin ten występuje w wielu grach zręcznościowych.
+
+- Wielokrotne prośby o uźrodłowienie - cały rozdział "2. Specyfikacja produktu" jest tekstem autorskim i nie został z nikąd skopiowany.

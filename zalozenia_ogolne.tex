@@ -39,7 +39,7 @@
 \end{figure}
 \vfill
 
-{\large Wrocław 2013}\par
+{\large Wrocław 2014}\par
 
 \pagebreak
 
@@ -53,15 +53,17 @@
 \begin{center}
 \begin{table}[h]
 \begin{center}
+\caption{Historia zmian dokumentu}\label{T:Zmiany}
+\vspace{3ex}
 \begin{tabularx}{1\textwidth}{|l|l|l|X|}
 \hline
 Data & Wersja & Autor & Opis zmian \\ \hline
-05.11.2013 & 1.0 & Zespół & Utworzenie dokumentu \\
+2013-11-05 & 1.0 & Zespół & Utworzenie dokumentu \\
+2013-11-26 & 1.1 & Karol Wieczorek & Uzupełnienie harmonogramu \\
+2014-01-04 & 1.2 & Krzysztof Wróbel & Poprawki stylistyczne \\
 \hline
 \end{tabularx}
 \end{center}
-\vspace{3ex}
-\caption{Historia zmian dokumentu}\label{T:Zmiany}
 \end{table}
 \end{center}
 
@@ -70,6 +72,7 @@ Data & Wersja & Autor & Opis zmian \\ \hline
 \tableofcontents
 
 \chapter{Słownik pojęć}
+\footnotetext[1]{Opracowano na podstawie \emph{Wikipedii} (\url{http://pl.wikipedia.org/})}
 
 \begin{description}
 \item[Kąt natarcia] - (ang. \emph{angle of attack}) jest to (umowny) kąt pomiędzy kierunkiem strugi napływającego powietrza, a~cięciwą skrzydła.
@@ -79,12 +82,12 @@ Data & Wersja & Autor & Opis zmian \\ \hline
 \item[Skrzela] - (ang. \emph{slots}) elementy skrzydła samolotu umieszczone wzdłuż krawędzi natarcia, mają za zadanie poprawienie własności aerodynamicznych statku powietrznego przy locie z~małymi prędkościami i~na dużych kątach natarcia poprzez zwiększenie siły nośnej lub opóźnienie oderwania się strug.
 \item[Lotki] - (ang. \emph{ailerons}) powierzchnie sterowe statku powietrznego, służące do kontroli jego przechylenia.
 \item[Trymer] - (ang. \emph{trim tab}) wychylna część steru na jego krawędzi spływu, ustawiana w~locie pod odpowiednim kątem, wychylana w~przeciwnym kierunku niż ster, zmniejsza siłę potrzebną pilotowi do utrzymania steru w~stałym wychyleniu.
-\item[Spojlery] - (ang. \emph{spoilers}) element skrzydła, którego wychylenie skutkuje w~zmniejszeniu siły nośnej i~zwiękrzesniu tarcia skrzydła.
-\item[System odniesienia WGS-84] - zbiór parametrów (z~1984) określających wielkość i~kształt Ziemi oraz właściwości jej potencjału grawitacyjnego. System ten definiuje elipsoidę, która jest generalizacją kształtu geoidy, wykorzystywaną do tworzenia map.
-\item[Wysokościomierz barometryczny] - czuły wyskalowany przyrząd wskazujący wysokość dzieki pomiarowi ciśnienia powietrza.
-\item[Radiowysokościomierz] - rodzaj lotniczego przyrządu pokładowego, który wskazuje rzeczywistą wysokość lotu nad powierzchnią Ziemi.
-\item[Wariometr] - przyrząd służący do wskazywania prędkości pionowej (wznoszenia lub opadania) statku.
-\item[Sztuczny horyzont] - przyrząd pomagający w~określeniu orientacji przestrzennej samolotu wzgledem horyzontu.
+\item[Spojlery] - (ang. \emph{spoilers}) element skrzydła, którego wychylenie skutkuje w~zmniejszeniu siły nośnej i~zwiększeniu tarcia skrzydła.
+\item[System odniesienia WGS-84] - zbiór parametrów (z~1984) określających wielkość i~kształt Ziemi oraz właściwości jej potencjału grawitacyjnego. System ten definiuje elipsoidę, która jest uogólnieniem kształtu geoidy, używaną do tworzenia map.
+\item[Wysokościomierz barometryczny] - czuły, wyskalowany przyrząd \linebreak wskazujący wysokość dzięki pomiarowi ciśnienia powietrza.
+\item[Radiowysokościomierz] - rodzaj lotniczego przyrządu pokładowego, \linebreak który wskazuje rzeczywistą wysokość lotu nad powierzchnią Ziemi.
+\item[Wariometr] - przyrząd służący do wskazywania prędkości pionowej \linebreak (wznoszenia lub opadania) statku.
+\item[Sztuczny horyzont] - przyrząd pomagający w~określeniu orientacji przestrzennej samolotu względem horyzontu.
 \item[ILS] - (ang. \emph{Instrumental Landing System}) radiowy system nawigacyjny wspomagający lądowanie samolotu w~warunkach ograniczonej widoczności.
 \item[VOR] - (ang. \emph{VHF Omni-directional Range}) rodzaj radiolatarni stosowanej w~lotnictwie.
 \item[DME] - (ang. \emph{Distance Measuring Equipment}) radiowa pomoc nawigacyjna służąca do pomiaru fizycznej odległości pomiędzy samolotem a~stacją naziemną.
@@ -99,62 +102,62 @@ Data & Wersja & Autor & Opis zmian \\ \hline
 \item[COCOMO II] - jedna z~metod szacowania pracochłonności systemu informatycznego bazująca na rozmiarze oprogramowania.
 \end{description}
 
-\chapter{Specyfikacja produktu}
+\chapter{Specyfikacja symulatora lotu}
 
-\section{Ogólna specyfikacja produktu}
+\section{Ogólna specyfikacja symulatora}
 
-Symulator lotu powinien być grą symulującą ruch cywilnych maszyn latających, przeznaczoną dla komputerów osobistych klasy PC. Jego założeniem jest jak najwierniejsze modelowanie zjawisk fizycznych towarzyszących statkowi powietrznemu w~czasie lotu, jak i~na lotnisku. Dodatkowo kładzie się nacisk na dokładne odzwierciedlenie specyfiki ruchu lotnicznego i~pracy pilota.
+Symulator lotu jest grą symulującą ruch cywilnych maszyn latających, przeznaczoną dla komputerów osobistych klasy PC. Jego założeniem jest jak najwierniejsze modelowanie zjawisk fizycznych towarzyszących statkowi powietrznemu w~czasie lotu, jak i~na lotnisku. Dodatkowo kładzie się nacisk na dokładne odzwierciedlenie specyfiki ruchu lotnicznego i~pracy pilota.
 
 \section{Komponenty symulatora}
 
 \subsection{Silnik fizyczny}
 
-Podstawowym celem symulatora jest dokładne wymodelowanie zjawisk fizycznych. Konieczna do tego jest implementacja w~grze silnika dynamiki newtonowskiej. Po aplikacji sił działających na bryłę sztywną powinno być w~nim możliwe kontrolowanie jego toru ruchu, prędkości i~przyspieszenia. Nie zamierza się uwzględniać fizyki relatywistycznej.
+Podstawowym celem symulatora jest dokładne wymodelowanie zjawisk fizycznych. Konieczna do tego jest implementacja w~grze silnika dynamiki newtonowskiej. Symulowanie sił działających na bryłę sztywną powinno umożliwiać kontrolowanie jego toru ruchu, prędkości i~przyspieszenia. Nie zamierza się uwzględniać fizyki relatywistycznej.
 
 \subsection{Modelowanie ruchu samolotu}
 
-Statek powietrzny jest w~sensie fizycznym bryłą sztywną o~zmieniającym się w~czasie ruchu kształcie i~masie. Działają siły różnego pochodzenia. Można wsród nich wymienić:
+Statek powietrzny jest w~sensie fizycznym bryłą sztywną o~zmieniających się w~czasie ruchu parametrach kształtu i~masy. Działają na niego siły różnego pochodzenia. Można wsród nich wymienić:
 \begin{description}
-\item[Grawitacja ziemska] w~zależności od aktualnego położenia obiektu na Ziemi i~wysokości nad poziomem morza przyspieszenie ziemskie może mieć minimalnie różne wartości. Spowodowane to jest odległością od środka planety i~siły odśrodkowej wywołanej jej ruchem obrotowym.
-\item[Siła nośna] Skrzydła samolotu poruszające się w~ściśliwym płynie takim, jakim jest powietrze, generują siłę przeciwną do siły grawitacji. Pozwala to na unoszenie się obiektu nad Ziemią. Wartość siły nośnej zależy od profilu skrzydła, jego powierzchni, prędkości w~ośrodku, kąta natarcia, ciśnienia atmosferycznego, temperatury, wychylenia klap i~skrzeli (slotów). Obroty samolotu wokół jego osi są powodowane przez różnice w~sile nośnej generowanej przez poszczególne powierzchnie. Wychylanie lotek generuje różnice siły nośnej na skrzydłach, co jest przyczyną przechylania się maszyny na boki. Usterzenie na statecznikach pionowych i~poziomych obraca obiekt odpowiednio w~osi pionowej i~wdłuż skrzydeł. Pozycja poszczególnych powierzchni sterujących może być zachowana poprzez użycie trymeru.
-\item[Opór powietrza] Ruch obiektu w~atmosferze wymaga użycia siły do przesuwania napotkanych molekułów. Siła ta rośnie wraz ze wzrostem gęstości ośrodka i~prędkości przesuwania się w~nim.
-\item[Ciąg] Siła ciągu jest wynikiem działania silników. Planuje się implementacje trzech różnych rodzajów napędu: śmigłowy, odrzutowy i~rakietowy. Moc ciągu zależy od tempa spalania paliwa, gęstości powietrza i~od indywidualnych właściwości silnika. Przy locie wznoszącym lub opadającym ciąg ma wpływ na siłę nośną statku.
-\item[Hamowanie] Statek powietrzny może być wyhamowywany na cztery różne sposoby: poprzez użycie spojlerów, odwracaczy ciągu, hamulców w~kołach (tylko po lądowaniu) oraz poprzez odpowiednie manewrowanie całym samolotem.
-\item[Kontakt z~podłożem] Podwozie samolotu działa podobnie do sprężyny. Przyziemienie powoduje aplikacje siły skierowanej pionowo w~górę.
+\item[Grawitację ziemską] -- w~zależności od aktualnego położenia obiektu na Ziemi i~wysokości nad poziomem morza przyspieszenie ziemskie może mieć minimalnie różne wartości. Spowodowane to jest odległością od środka Ziemi i~siły odśrodkowej wywołanej jej ruchem obrotowym.
+\item[Siłę nośną] -- skrzydła samolotu poruszające się w~ściśliwym płynie takim, jakim jest powietrze, wytwarzają siłę przeciwną do siły grawitacji. Pozwala to na unoszenie się obiektu nad Ziemią. Wartość siły nośnej zależy od profilu skrzydła, jego powierzchni, prędkości w~ośrodku, kąta natarcia, ciśnienia atmosferycznego, temperatury, wychylenia klap i~skrzeli (slotów). Obroty samolotu wokół jego osi są powodowane przez różnice w~sile nośnej wytwarzanej przez poszczególne powierzchnie. Wychylanie lotek powoduje różnice siły nośnej na skrzydłach, co skutkuje przechylaniem się samolotu na boki. Usterzenie na statecznikach pionowych i~poziomych samolot obiekt odpowiednio w~osi pionowej i~wdłuż skrzydeł. Pozycja poszczególnych powierzchni sterujących może być utrzymana poprzez użycie trymeru.
+\item[Opór powietrza] -- ruch obiektu w~atmosferze wymaga użycia siły do przesuwania napotkanych molekułów. Siła ta rośnie wraz ze wzrostem gęstości ośrodka i~prędkości przesuwania się w~nim.
+\item[Ciąg] -- siła ciągu jest wynikiem działania silników. Planuje się implementacje trzech różnych rodzajów napędu: śmigłowy, odrzutowy i~rakietowy. Moc ciągu zależy od tempa spalania paliwa, gęstości powietrza i~od indywidualnych właściwości silnika. Przy locie wznoszącym lub opadającym ciąg ma wpływ na siłę nośną statku.
+\item[Hamowanie] -- statek powietrzny może być wyhamowywany na cztery różne sposoby: przez użycie spojlerów, odwracaczy ciągu, hamulców w~kołach (tylko po przyziemieniu) oraz przez odpowiednie manewrowanie całym samolotem.
+\item[Kontakt z~podłożem] -- podwozie samolotu działa podobnie do sprężyny. Przyziemienie powoduje przyłożenie do kadłuba siły skierowanej pionowo w~górę.
 \end{description}
 
 \vspace*{\baselineskip}
 Ważną informacją potrzebną do symulacji ruchu samolotu jest jego rozkład masy. W~szczególności na zmianę zachowania statku w~powietrzu ma wpływ ilość oraz rozmieszczenie paliwa, pasażerów i~bagaży. Podczas lotu zmienia się także ilość paliwa w~zbiornikach.
 
 \subsection{Warunki pogodowe}
-Oferowane będą trzy tryby pogody.
+W symulatorze oferowane będą trzy tryby pogody:
 
 \begin{itemize}
-\item Warunki predefiniowane przez użytkownika.
-\item Warunki zgodne z~lokalnym klimatem, porą roku i~dnia.
-\item Warunki aktualne (pobierane z~zewnętrznych zasobów).
+\item warunki predefiniowane przez użytkownika,
+\item warunki zgodne z~lokalnym klimatem, porą roku i~dnia,
+\item warunki aktualne (pobierane z~zewnętrznych źrodeł).
 \end{itemize}
 
-W~każdym z~przypadków, wpływ na rzeczywiste odczyty temperatury, wilgotności i~ciśnienia ma wysokość, na której znajduje się obiekt.
+W~każdym z~przypadków, wpływ na rzeczywiste odczyty temperatury, wilgotności i~ciśnienia ma wysokość, na której znajduje się samolot.
 
 
 \subsection{Wykrywanie kolizji}
-Ze względów etycznych, po rozbiciu samolotu zostanie wygenerowany jedynie komunikat mówiący o~jego zniszczeniu. Nieprzewidywane są żadne animacje katastrofy i~wraku. Kolizje z~terenem poza miejscem lądowania będą wykrywane mniej dokładnie oraz będą od razu przerywały symulację lotu. W~przypadku lotnisk informacja o~kolizji będzie wyświetlana w~wyniku przeciążenia podwozia lub dotknięcia ziemi innym elementem maszyny. Zarówno zbliżenia do terenu lotniska, jak i~do innych obiektów będą symulowane z~najwyższą szczegółowością.
+Ze względów etycznych po rozbiciu samolotu zostanie wygenerowany jedynie komunikat mówiący o~jego zniszczeniu. Nieprzewidywane są żadne animacje katastrofy i~wraku. Kolizje z~terenem poza miejscem lądowania będą wykrywane mniej dokładnie oraz będą od razu przerywały symulację lotu. W~przypadku lotnisk informacja o~kolizji będzie wyświetlana w~wyniku przeciążenia podwozia lub dotknięcia ziemi innym elementem maszyny. Zarówno zbliżenia do terenu lotniska, jak i~do innych obiektów będą symulowane z~najwyższą szczegółowością.
 
 \subsection{Dane techniczne samolotów}
-Program ma umożliwiać korzystanie z~różnych modeli samolotów. Niekoniecznie muszą one być dostarczone przez wytwórce symulatora. Dane konfiguracyjne powinny spełniać specyfikację ze strony \linebreak \url{http://msdn.microsoft.com/en-us/library/cc526949.aspx} .
+Program ma umożliwiać korzystanie z~różnych modeli samolotów. Niekoniecznie muszą one być dostarczone przez wytwórcę symulatora. Dane konfiguracyjne powinny spełniać specyfikację ze strony \url{http://msdn.microsoft.com/en-us/library/cc526949.aspx} .
 
 \subsection{Topografia Ziemi}
-Przewiduje się symulację lotu w~realnym świecie. Ukształtowanie terenu, jeziora, morza i~położenie lotnisk będą wczytywane z~map. Kształt planety powinien być elipsoidą obrotową spłaszczoną na biegunach wg systemu odniesienia WGS-84.
+Przewiduje się symulację lotu w~realnym świecie. Ukształtowanie terenu, jeziora, morza i~położenie lotnisk będą czytane z~map. Kształt Ziemi powinien być elipsoidą obrotową spłaszczoną na biegunach, por. system odniesienia WGS-84.
 
 \subsection{Pomoce nawigacyjne}
-Symulator powinien modelować zachowanie się niektórych pomocy nawigacyjnych, m.in.: mapy, kompas, wysokościomierz barometryczny, radiowysokościomierz, prędkościomierz, wariometr, sztuczny horyzont oraz systemy ILS, VOR, DME, NDB, TCAS, TAWS i~GPS.
+Symulator powinien modelować zachowanie się niektórych pomocy nawigacyjnych, m.in. map, kompasu, wysokościomierza barometrycznego, radiowysokościomierza, prędkościomierza, wariometru, sztucznego horyzontu oraz systemów ILS, VOR, DME, NDB, TCAS, TAWS i~GPS.
 
 \subsection{Generowanie grafiki}
-W programie umożliwiony będzie podgląd świata z~kabiny pilota, jak i~z zewnątrz samolotu. Sceneria będzie przedstawiała podstawową rzeźbę terenu, urządzenia na lotnisku oraz inne pojazdy i~statki powietrzne. Dodatkowo podczas widoku z~kokpitu przedstawione bedą wszystkie przyrządy pokładowe.
+W programie umożliwiony będzie podgląd świata z~kabiny pilota, jak i~z zewnątrz samolotu. Sceneria będzie przedstawiała podstawową rzeźbę terenu, urządzenia na lotnisku oraz inne pojazdy i~statki powietrzne. Dodatkowo podczas widoku kokpitu przedstawione bedą wszystkie przyrządy pokładowe.
 
 \subsection{Interakcja z~użytkownikiem}
-Użytkownik będzie mógł sterować statkiem używając myszki, joysticka i~klawiatury. Myszka będzie pomagała w~rozglądaniu się, joystick w~manualym sterowaniu samolotem, a~klawiatura w~szczegółowych ustawieniach lotu.
+Użytkownik będzie mógł sterować statkiem, używając myszy, joysticka i~klawiatury. Mysz będzie pomagała w~rozglądaniu się, joystick w~ręcznym sterowaniu samolotem, a~klawiatura w~szczegółowych ustawieniach lotu.
 
 \subsection{Kontrola lotów}
 Osobną pomocą nawigacyjną jest automatyczna kontrola lotów. Będzie ona przeprowadzana w~trybie tekstowym w~angielskim języku lotniczym.
@@ -163,29 +166,29 @@ Osobną pomocą nawigacyjną jest automatyczna kontrola lotów. Będzie ona prze
 Implementacji wymaga ruch służb lotniskowych, np. cystern, samochodów, holowników, itd.
 
 \subsection{Planowanie lotu}
-Ważnym elementem przed startem maszyny jest zaplanowanie lotu. Aplikacja będzie umożliwiała graficzne zaplanowanie trasy przelotu i~ilości paliwa.
+Ważnym elementem przed startem maszyny jest zaplanowanie lotu. Symulator będzie umożliwiał graficzne zaplanowanie trasy przelotu i~ilości paliwa.
 
 \subsection{Interfejs użytkownika}
 Interfejs użytkownika powinien pozwalać w~trybie okienkowym na skonfigurowanie parametrów symulacji. w~szczególności jest to: wybór samolotu, dnia, godziny, miejsca startu, pogody, trasy lotu, ilości paliwa i~liczby pasażerów.
 
 \subsection{Gra online}
-Użytkownicy będą mogli współpracować ze sobą i~widzieć się nawzajem, grając poprzez sieć internetową.
+Użytkownicy będą mogli współpracować ze sobą i~widzieć się nawzajem, grając poprzez Sieć.
 
 \section{Scenariusze użycia}
 Przewiduje się pięć różnych trybów gry.
 \subsection{Wolny lot}
 W tym trybie jedynym celem użytkownika jest pilotowanie samolotu, wykonywanie akrobacji, testowanie osiągów, trening pilotażu w~trudnych warunkach pogodowych, itp. Nie buduje się planu lotu, ani nie działa kontrola lotów. w~przestrzeni nie ma także innych statków powietrznych.
-\subsection{Przelot wg planu lotu}
-Scenariusz ten najbardziej odzwierciedla realną pracę pilota. Gra zaczyna się przy hangarze na płycie lotniska. Użytkownik powinien utworzyć plan lotu, zatankować, zabrać ładunek, bądź pasażerów, uzyskać pozwolenie na lot i~start, stosować się do poleceń kontroli lotów i~prawa lotniczego. Może napotkać inne, kontrolowane przez komputer, samoloty.
+\subsection{Przelot według planu lotu}
+Scenariusz ten najbardziej odzwierciedla realną pracę pilota. Gra zaczyna się przy hangarze na płycie lotniska. Użytkownik powinien utworzyć plan lotu, zatankować, zabrać ładunek lub pasażerów, uzyskać pozwolenie na lot i~start, stosować się do poleceń kontroli lotów i~prawa lotniczego. Może napotkać inne, kontrolowane przez komputer, samoloty.
 \subsection{Tryb wielu graczy}
-Symulacja podobna jest do poprzedniej z~tą różnicą, że uczestniczyć w~niej może kilku rzeczywistych użytkowników.
+Symulacja podobna jest do opisanej w p. 2. 3. 2. z~tą różnicą, że uczestniczyć w~niej może kilku rzeczywistych użytkowników.
 \subsection{Samouczek}
 Tryb treningowy pozwalający na praktykę sztuki pilotażu i~poznawanie pomocy nawigacyjnych.
 \subsection{Misje}
 Specjalne, z góry określone zadania do wykonania przez gracza. Za ich ukończenie przyznawane będą trofea.
 
 \section{Opis użytkownika}
-Z definicji gra jest dokładnym symulatorem i~jej celem nie jest zabawiać, tylko dokładnie modelować rzeczywistość. Od użytkownika oczekuje się precyzji, cierpliwości, opanowania, szybkiej reakcji, zdolności manualnych, jak i~chęci nauki oraz znajomości języka angielskiego.
+Z definicji gra jest dokładnym symulatorem i~jej celem nie jest zabawianie, tylko dokładne modelowanie rzeczywistości. Od użytkownika oczekuje się precyzji, cierpliwości, opanowania, szybkiej reakcji, zdolności manualnych oraz chęci do nauki i znajomości języka angielskiego.
 
 \chapter{Harmonogram}
 Harmonogram ,,Symulatora lotu'' został sporządzony przy użyciu powszechnie stosowanych metod szacowania rozmiaru i~pracochłonności oprogramowania oraz na podstawie wiedzy członków zespołu. Do wyznaczenia wielkości projektu użyto metody punktów funkcyjnych i~na jej podstawie stwierdzono, że kod programu będzie miał ok. 50-60 tysięcy wierszy. Następnie, za pomocą metody COCOMO~II obliczono przybliżoną pracochłonność całego projektu (wyniosła ok. 180 osobomiesięcy) oraz jego poszczególnych części składowych. Do tego wyniku dodano 20 osobomiesięcy buforu związanego z urlopami pracowników i~innymi niemożliwymi do przewidzenia zdarzeniami. Przy założeniu, że zespół programistów będzie liczył 10 osób, wykonanie oprogramowania powinno zająć niecałe dwa lata.
