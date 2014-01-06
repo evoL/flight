@@ -1,0 +1,8 @@
+Komentarz do uwag do Specyfikacji wymagań z dnia 13.12.2013 r.
+
+- Ogólna prośba o uźródłowienie tekstu - tekst jest autorski, nie pochodzi z żadnych zewnętrznych źródeł.
+
+- W "1.3. Pilot w realnym świecie" w tekscie "... używaniu map, schematów oraz..." jest mowa o m.in. schematach podejścia (w formie rysunkowej, procedury są zdefiniowane najczęściej za pomocą listy kroków).
+
+- W "2.2.1. Sterowanie" w użycie słowa "joystick" jest dopuszczane przez Słownik Języka Polskieg PWN (por. http://sjp.pwn.pl/slownik/2562347/joystick) w kontekscie gier komputerowych. Dodatkowo w dzisiejszych czasach słowo "joystick" jest łątwiej rozpoznawane/kojarzone niż "drążek sterowy".
+
