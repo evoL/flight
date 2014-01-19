@@ -1,0 +1,208 @@
+\documentclass{mwrep}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{tgbonum}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\renewcommand{\labelitemi}{$\bullet$}
+\setlength{\parindent}{0cm}
+\addto\captionspolish{\renewcommand{\tablename}{Tabela}}
+
+\newcommand*{\titleGP}{\begingroup
+\centering
+
+{\large Studencka Pracownia Inżynierii Oprogramowania}\\Instytut Informatyki Uniwersytetu Wrocławskiego\par
+\vspace*{16\baselineskip}
+
+{\Large Rafał Hirsz, Karol Wieczorek, Krzysztof Wróbel\par}
+\vspace*{\baselineskip}
+
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+\rule{\textwidth}{0.4pt}\\[\baselineskip]
+
+{\Huge SYMULATOR LOTU}\\[0.2\baselineskip]
+
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+\rule{\textwidth}{1.6pt}\\[\baselineskip]
+
+\scshape
+{\huge Analiza przypadków użycia}\par
+\vspace*{2\baselineskip}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=5\baselineskip]{flightsim-team-logo.pdf}
+\end{figure}
+\vfill
+
+{\large Wrocław 2014}\par
+
+\pagebreak
+
+\endgroup}
+
+\begin{document}
+
+\thispagestyle{empty}
+\titleGP
+
+\begin{center}
+\begin{table}[h]
+\begin{center}
+\caption{Historia zmian dokumentu}\label{T:Zmiany}
+\vspace{3ex}
+\begin{tabularx}{1\textwidth}{|l|l|l|X|}
+\hline
+Data & Wersja & Autor & Opis zmian \\ \hline
+2014-01-10 & 1.0 & Karol Wieczorek & Utworzenie dokumentu \\
+\hline
+\end{tabularx}
+\end{center}
+\end{table}
+\end{center}
+
+\pagebreak
+
+\tableofcontents
+
+\chapter{Ustawienia}
+\section{Wybór ustawień graficznych}
+\begin{enumerate}
+  \item Użytkownik klika w przycisk ,,Ustawienia'' w menu głównym.
+  \item Użytkownik wybiera zakładkę ,,Ustawienia graficzne''.
+  \item Użytkownik wprowadza jedną lub więcej zmian:
+    \begin{itemize}
+      \item rozdzielczość okna;
+      \item poziom szczegółów kokpitu samolotu;
+      \item poziom szczegółów map;
+      \item włączenie synchronizacji pionowej;
+      \item ustawienia dotyczące graficznego interfejsu użytkownika.
+    \end{itemize}
+  \item Użytkownik naciska przycisk ,,Wprowadź zmiany''.
+  \item Program wprowadza podane przez użytkownika zmiany.
+\end{enumerate}
+
+\section{Wybór ustawień dźwieku}
+\begin{enumerate}
+  \item Użytkownik klika w przycisk ,,Ustawienia'' w menu głównym.
+  \item Użytkownik zakładkę ,,Ustawienia dźwięku''.
+  \item Użytkownik wprowadza jedną lub więcej zmian:
+  \begin{itemize}
+    \item głośność dźwięku;
+    \item ilość kanałów.
+  \end{itemize}
+  \item Użytkownik naciska przycisk ,,Wprowadź zmiany''.
+  \item Program wprowadza podane przez użytkownika zmiany.
+\end{enumerate}
+
+\chapter{Początek rozgrywki}
+\section{Rozpoczęcie samouczka}
+\begin{enumerate}
+  \item Użytkownik naciska przycisk ,,Samouczek'' w menu głównym.
+  \item Program wyświetla listę wszystkich dostępnych scenariuszy. Scenariusze, które zostały już ukończone są oznaczone zielonym kolorem, pierwsza niewykonana lekcja białym, a pozostałe czerwonym.
+  \item Użytkownik wskazuje scenariusz, którą chciałby odbyć.
+  \item Program wczytuje dane wybranego scenariusza (mapę, samolot, ustawienia, sytuację początkową).
+  \item Rozpoczyna się właściwa rozgrywka.
+\end{enumerate}
+
+\section{Rozpoczęcie misji}
+\begin{enumerate}
+  \item Użytkownik naciska przycisk ,,Misje'' w menu głównym.
+  \item Program wyświetla listę wszystkich dostępnych misji wraz z opisem i szacowanym czasem ukoczenia.
+  \item Użytkownik wskazuje zadanie, które chciałby wykobnać.
+  \item Program wyświetla ekran, na którym znajdują się wszystkie szczegóły, mapy i diagramy potrzebne do jej przejścia.
+  \item Użytkownik zapoznaje się z ww. pomocami i naciska przycisk ,,Rozpocznij misję''.
+  \item Program wczytuje dane wybranej misji (mapę, samolot, ustawienia, sytuację poczatkową).
+  \item Rozpoczyna się właściwa rozgrywka.
+\end{enumerate}
+
+\section{Rozpoczęcie swobodnego lotu}
+\begin{enumerate}
+  \item Użytkownik naciska przycisk ,,Tryb swobodnego lotu'' w menu głównym.
+  \item Program wyświetla ekran z dostępnymi samolotami.
+  \item Użytkownik wybiera samolot i naciska przycisk ,,Dalej''.
+  \item Program wyświetla ekran z dostępnymi mapami oraz miejscami startu znajdującymi się na poszczególnych mapach.
+  \item Użytkownik wybiera mapę oraz miejsce startu i naciska przycisk ,,Dalej''.
+  \item Program wyświetla ekran z pozostałymi ustawieniami dotyczącymi:
+  \begin{itemize}
+    \item warunków pogodowych
+    \item ładunku samolotu
+    \item planu lotu
+    \item ewentualnych usterek samolotu
+  \end{itemize}
+  \item Użytkownik dostosowuje rozgrywkę do własnych upodobań i naciska przycisk ,,Dalej''.
+  \item Program wyświetla podsumowanie konfuguracji lotu swobodnego.
+  \item Użytkownik zapoznaje się z podsumowaniem. Jesli wszystko jest w porządku, naciska przycisk ,,Rozpocznij grę'', w przeciwnym wypadku naciska przycisk ,,Wstecz'' i wprowadza poprawki.
+  \item Program wczytuje odpowiednie dane (mapę, samolot, ustawienia, sytuację początkową).
+  \item Rozpoczyna się właściwa rozgrywka.
+\end{enumerate}
+
+\chapter{Rozgrywka}
+\section{Lot podczas samouczka //To jest słabe, ale nie umiem lepiej, liczę na protipy}
+\begin{enumerate}
+  \item W momencie rozpoczęcia dowolnej z lekcji samouczka program wyświetla dodatkowe okno na komunikaty szkoleniowe oraz mini-zadania do wykonania przez użytkownika.
+  \item Co pewien czas użytkownik dostaje komunikaty pozwalający zapoznać się z pewnym elementem sztuki prowadzenia samolotu.
+  \item Po każdym komunikacie szkoleniowym użytkownik dostaje mini-zadanie do wykonania (np. będąc jeszcze na ziemi wychylić maksymalnie lotki i wrócić potem do początkowej pozycji).
+  \item Po poprawnym wykonaniu mini-zadania program zapisuje stan gry.
+  \item W przypadku niepowodzenia (trudność mini-zadań wzrasta wraz z postępami czynionymi w samouczku) program automatycznie wczytuje ostatni zapisany stan gry.
+\end{enumerate}
+
+\section{Lot podczas wykonywania misji //To też}
+\begin{enumerate}
+  \item W momencie rozpoczęcia misji program wyświetla dodatkowe okno z celami misji (głównymi i pobocznymi).
+  \item Gdy użytkownik wykona jeden z celów misji, jest on zaznaczany na zielono.
+  \item Gdy użytkownik podejmie akcję, która uniemożliwi wykonanie któregos z celów, to cel ten zostaje zaznaczony na czerwono.
+  \item Po ukończeniu rozgrywki program pokazuje podsumowanie wyników misji i, w przypadku pomyslnego zakończenia, nagradza użytkowika odpowiednimi trofea.
+\end{enumerate}
+
+\section{Sterowanie za pomocą klawiatury}
+\begin{enumerate}
+  \item Podczas lotu użytownik naciska dowolny klawisz uwzględniony w tabeli 2.1 z dokumentu \cite{WYM}.
+  \item Program odczytuje wciśnięty klawisz i wykonuje odpowiednią reakcję.
+\end{enumerate}
+
+\section{Sterowanie za pomocą joysticka}
+\begin{enumerate}
+  \item Podczas lotu użytownik naciska dowolny ruch joysticka uwzględniony w tabeli 2.2 z dokumentu \cite{WYM}.
+  \item Program odczytuje wciśnięty klawisz i wykonuje odpowiednią reakcję.
+\end{enumerate}
+
+\section{Sterowanie za pomocą myszy}
+\begin{enumerate}
+  \item Podczas lotu użytownik klika myszą na dowolny element w kokpicie samolotu.
+  \item Program sprawdza, który element kokpitu został użyty i wykonuje stosowną akcję.
+\end{enumerate}
+
+\section{Kontakt z wieżą kontroli lotów}
+\begin{enumerate}
+  \item Użytkownik uaktywnia okno kontroli lotów poprzez kliknięcie na nie.
+  \item Program wyświetla użytkownikowi listę możliwych komunikatów.
+  \item Użytkownik wybiera komunikat, który chce nadać.
+  \item Komunikat zostaje wysłany do wieży kontoli lotów.
+  \item Po chwili użytkownik dostaje odpowiedź.
+  \item Jeśli odpowiedź kończy wymianę komunikatów, następuje powrót do trybu lotu, w przeciwnym wypadku powtarzane są kroki 2-6.
+\end{enumerate}
+
+\section{Powiadomienia z wieży kontroli lotów //Krzysiu, sprawdź czy to ma w ogóle sens!}
+\begin{enumerate}
+  \item Wieża nadaje komunikat (np. o zmianie miejsca lądowania) do samolotu.
+  \item Przy oknie kontroli lotów pojawia się ikona z liczbą nieodebranych komunikatów.
+  \item Użytkownik klika na ikonę i odczytuje wiadomości.
+\end{enumerate}
+
+\section{Korzystanie z biblioteki}
+\begin{enumerate}
+  \item W dowolnym momencie użytkownik przechodzi do menu i naciska przycisk ,,Biblioteka''.
+  \item Program łączy się z internetową bazą dokumentów i wyświetla prostą wyszukiwarkę.
+  \item Użytkownik wyszukuje odpowiedni dokument w sposób określony w rodziale 2.1.4 w \cite{WYM}.
+  \item Program pobiera dokument i wyświetla go użytkownikowi.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+  \bibitem{WYM} R. Hirsz, K. Wieczorek, K. Wróbel: \textit{Symulator lotu: Specyfikacja wymagań}, Wrocław, SPIO IIUwr 2014.
+\end{thebibliography}
+
+\end{document}
