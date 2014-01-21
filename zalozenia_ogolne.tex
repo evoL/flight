@@ -45,6 +45,14 @@
 
 \endgroup}
 
+\newcommand{\fixedspaceword}[2][1]{%
+  \begingroup
+  \spaceskip=#1\fontdimen2\font minus \fontdimen4\font
+  \xspaceskip=0pt\relax % just to be sure
+  #2%
+  \endgroup
+}
+
 \begin{document}
 
 \thispagestyle{empty}
@@ -59,8 +67,9 @@
 \hline
 Data & Wersja & Autor & Opis zmian \\ \hline
 2013-11-05 & 1.0 & Zespół & Utworzenie dokumentu \\
-2013-11-26 & 1.1 & Karol Wieczorek & Uzupełnienie harmonogramu \\
-2014-01-04 & 1.2 & Krzysztof Wróbel & Poprawki stylistyczne, uzupełnienie słownika pojęć \\
+2013-11-26 & 1.1 & Karol Wieczorek & \fixedspaceword{Uzupełnienie harmonogramu} \\
+2014-01-04 & 1.2 & Krzysztof Wróbel & \fixedspaceword{Poprawki stylistyczne}, \fixedspaceword{uzupełnienie słownika pojęć} \\
+2014-01-21 & 1.3 & Rafał Hirsz & Poprawki stylistyczne \\
 \hline
 \end{tabularx}
 \end{center}
@@ -71,35 +80,36 @@ Data & Wersja & Autor & Opis zmian \\ \hline
 
 \tableofcontents
 
-\chapter{Słownik pojęć}
-\footnotetext[1]{Opracowano na podstawie \emph{Wikipedii} (\url{http://pl.wikipedia.org/})}
+\chapter{Słownik pojęć\protect\footnotemark[1]{}}
+
+\footnotetext[1]{Hasła opracowano na podstawie \emph{Wikipedii} (\url{http://pl.wikipedia.org/})}
 
 \begin{description}
-\item[Kąt natarcia] - (ang. \emph{angle of attack}) jest to (umowny) kąt pomiędzy kierunkiem strugi napływającego powietrza, a~cięciwą skrzydła.
-\item[Krawędź natarcia] - (ang. \emph{leading edge}) przednia krawędź skrzydła.
-\item[Krawędź spływu] - (ang. \emph{trailing edge}) tylna część skrzydła, gdzie zbiegają się strugi powietrza znad i~spod skrzydła.
-\item[Klapy] - (ang. \emph{flaps}) ruchome powierzchnie sterowe, umiejscowione zazwyczaj w~tylnej części skrzydła statku powietrznego, pozwalająca w~razie potrzeby znacznie zwiększyć siłę nośną oraz opór skrzydła.
-\item[Skrzela] - (ang. \emph{slots}) elementy skrzydła samolotu umieszczone wzdłuż krawędzi natarcia, mają za zadanie poprawienie własności aerodynamicznych statku powietrznego przy locie z~małymi prędkościami i~na dużych kątach natarcia poprzez zwiększenie siły nośnej lub opóźnienie oderwania się strug.
-\item[Lotki] - (ang. \emph{ailerons}) powierzchnie sterowe statku powietrznego, służące do kontroli jego przechylenia.
-\item[Trymer] - (ang. \emph{trim tab}) wychylna część steru na jego krawędzi spływu, ustawiana w~locie pod odpowiednim kątem, wychylana w~przeciwnym kierunku niż ster, zmniejsza siłę potrzebną pilotowi do utrzymania steru w~stałym wychyleniu.
-\item[Spojlery] - (ang. \emph{spoilers}) element skrzydła, którego wychylenie skutkuje w~zmniejszeniu siły nośnej i~zwiększeniu tarcia skrzydła.
-\item[System odniesienia WGS-84] - zbiór parametrów (z~1984) określających wielkość i~kształt Ziemi oraz właściwości jej potencjału grawitacyjnego. System ten definiuje elipsoidę, która jest uogólnieniem kształtu geoidy, używaną do tworzenia map.
-\item[Wysokościomierz barometryczny] - czuły, wyskalowany przyrząd \linebreak wskazujący wysokość dzięki pomiarowi ciśnienia powietrza.
-\item[Radiowysokościomierz] - rodzaj lotniczego przyrządu pokładowego, \linebreak który wskazuje rzeczywistą wysokość lotu nad powierzchnią Ziemi.
-\item[Wariometr] - przyrząd służący do wskazywania prędkości pionowej \linebreak (wznoszenia lub opadania) statku.
-\item[Sztuczny horyzont] - przyrząd pomagający w~określeniu orientacji przestrzennej samolotu względem horyzontu.
-\item[ILS] - (ang. \emph{Instrumental Landing System}) radiowy system nawigacyjny wspomagający lądowanie samolotu w~warunkach ograniczonej widoczności.
-\item[VOR] - (ang. \emph{VHF Omni-directional Range}) rodzaj radiolatarni stosowanej w~lotnictwie.
-\item[DME] - (ang. \emph{Distance Measuring Equipment}) radiowa pomoc nawigacyjna służąca do pomiaru fizycznej odległości pomiędzy samolotem a~stacją naziemną.
-\item[NDB] - (ang. \emph{Non-Directional Beacon}) naziemna radiolatarnia bezkierunkowa.
-\item[TCAS] - (ang. \emph{Traffic Alert and Collision Avoidance System}) pokładowy system zapobiegający zderzeniom statków powietrznych.
-\item[TAWS] - (ang. \emph{Terrain Awareness and Warning System}) urządzenie pokładowe ostrzegające pilotów o~zbliżającej się powierzchni gruntu.
-\item[Metoda punktów funkcyjnych] - najczęściej stosowana metoda szacowania wielkości systemów informatycznych uzależniająca ich złożoność od ilości realizowanych przez nie funkcji.
-\item[Kod lotniska IATA] - trzyliterowy kod alfanumeryczny, służący do oznaczania portów lotniczych na całym świecie. Kody te nadawane są przez Międzynarodowe Zrzeszenie Przewoźników Powietrznych (IATA).
-\item[Kod lotniska ICAO] - czteroliterowy kod, służący do adresowania portów lotniczych na całym świecie. Kody te nadawane są przez Organizację Międzynarodowego Lotnictwa Cywilnego (ICAO).
-\item[Lot VFR] - (ang. \emph{Visual Flight Rules}) lot wykonywany zgodnie z przepisami dla lotów z widocznością.
-\item[Lot IFR] - (ang. \emph{Instrumental Flight Rules}) lot wykonywany zgodnie z przepisami dla lotów według wskazań przyrządów.
-\item[COCOMO II] - jedna z~metod szacowania pracochłonności systemu informatycznego bazująca na rozmiarze oprogramowania.
+\item[COCOMO II] -- jedna z~metod szacowania pracochłonności systemu informatycznego bazująca na rozmiarze oprogramowania.
+\item[DME] -- (ang. \emph{Distance Measuring Equipment}) radiowa pomoc nawigacyjna służąca do pomiaru fizycznej odległości pomiędzy samolotem a~stacją naziemną.
+\item[ILS] -- (ang. \emph{Instrumental Landing System}) radiowy system nawigacyjny wspomagający lądowanie samolotu w~warunkach ograniczonej widoczności.
+\item[Kąt natarcia] -- (ang. \emph{angle of attack}) jest to (umowny) kąt pomiędzy kierunkiem strugi napływającego powietrza, a~cięciwą skrzydła.
+\item[Klapy] -- (ang. \emph{flaps}) ruchome powierzchnie sterowe, umiejscowione zazwyczaj w~tylnej części skrzydła statku powietrznego, pozwalająca w~razie potrzeby znacznie zwiększyć siłę nośną oraz opór skrzydła.
+\item[Kod lotniska IATA] -- trzyliterowy kod alfanumeryczny, służący do oznaczania portów lotniczych na całym świecie. Kody te nadawane są przez Międzynarodowe Zrzeszenie Przewoźników Powietrznych (IATA).
+\item[Kod lotniska ICAO] -- czteroliterowy kod, służący do adresowania portów lotniczych na całym świecie. Kody te nadawane są przez Organizację Międzynarodowego Lotnictwa Cywilnego (ICAO).
+\item[Krawędź natarcia] -- (ang. \emph{leading edge}) przednia krawędź skrzydła.
+\item[Krawędź spływu] -- (ang. \emph{trailing edge}) tylna część skrzydła, gdzie zbiegają się strugi powietrza znad i~spod skrzydła.
+\item[Lot IFR] -- (ang. \emph{Instrumental Flight Rules}) lot wykonywany zgodnie z przepisami dla lotów według wskazań przyrządów.
+\item[Lot VFR] -- (ang. \emph{Visual Flight Rules}) lot wykonywany zgodnie z przepisami dla lotów z widocznością.
+\item[Lotki] -- (ang. \emph{ailerons}) powierzchnie sterowe statku powietrznego, służące do kontroli jego przechylenia.
+\item[Metoda punktów funkcyjnych] -- najczęściej stosowana metoda szacowania wielkości systemów informatycznych uzależniająca ich złożoność od ilości realizowanych przez nie funkcji.
+\item[NDB] -- (ang. \emph{Non-Directional Beacon}) naziemna radiolatarnia bezkierunkowa.
+\item[Radiowysokościomierz] -- rodzaj lotniczego przyrządu pokładowego, \linebreak który wskazuje rzeczywistą wysokość lotu nad powierzchnią Ziemi.
+\item[Skrzela] -- (ang. \emph{slots}) elementy skrzydła samolotu umieszczone wzdłuż krawędzi natarcia, mają za zadanie poprawienie własności aerodynamicznych statku powietrznego przy locie z~małymi prędkościami i~na dużych kątach natarcia poprzez zwiększenie siły nośnej lub opóźnienie oderwania się strug.
+\item[Spojlery] -- (ang. \emph{spoilers}) element skrzydła, którego wychylenie skutkuje w~zmniejszeniu siły nośnej i~zwiększeniu tarcia skrzydła.
+\item[System odniesienia WGS-84] -- zbiór parametrów (z~1984) określających wielkość i~kształt Ziemi oraz właściwości jej potencjału grawitacyjnego. System ten definiuje elipsoidę, która jest uogólnieniem kształtu geoidy, używaną do tworzenia map.
+\item[Sztuczny horyzont] -- przyrząd pomagający w~określeniu orientacji przestrzennej samolotu względem horyzontu.
+\item[TAWS] -- (ang. \emph{Terrain Awareness and Warning System}) urządzenie pokładowe ostrzegające pilotów o~zbliżającej się powierzchni gruntu.
+\item[TCAS] -- (ang. \emph{Traffic Alert and Collision Avoidance System}) pokładowy system zapobiegający zderzeniom statków powietrznych.
+\item[Trymer] -- (ang. \emph{trim tab}) wychylna część steru na jego krawędzi spływu, ustawiana w~locie pod odpowiednim kątem, wychylana w~przeciwnym kierunku niż ster, zmniejsza siłę potrzebną pilotowi do utrzymania steru w~stałym wychyleniu.
+\item[VOR] -- (ang. \emph{VHF Omni-directional Range}) rodzaj radiolatarni stosowanej w~lotnictwie.
+\item[Wariometr] -- przyrząd służący do wskazywania prędkości pionowej \linebreak (wznoszenia lub opadania) statku.
+\item[Wysokościomierz barometryczny] -- czuły, wyskalowany przyrząd \linebreak wskazujący wysokość dzięki pomiarowi ciśnienia powietrza.
 \end{description}
 
 \chapter{Specyfikacja symulatora lotu}
@@ -110,17 +120,17 @@ Symulator lotu jest grą symulującą ruch cywilnych maszyn latających, przezna
 
 \section{Komponenty symulatora}
 
-\subsection{Silnik fizyczny}
+\subsection{Symulator oddziaływań fizycznych}
 
-Podstawowym celem symulatora jest dokładne wymodelowanie zjawisk fizycznych. Konieczna do tego jest implementacja w~grze silnika dynamiki newtonowskiej. Symulowanie sił działających na bryłę sztywną powinno umożliwiać kontrolowanie jego toru ruchu, prędkości i~przyspieszenia. Nie zamierza się uwzględniać fizyki relatywistycznej.
+Podstawowym celem symulatora jest dokładne wymodelowanie zjawisk fizycznych. Konieczna do tego jest implementacja w~grze mechanizmów dynamiki newtonowskiej. Symulowanie sił działających na bryłę sztywną powinno umożliwiać kontrolowanie jej toru ruchu, prędkości i~przyspieszenia. Nie zamierza się uwzględniać fizyki relatywistycznej.
 
 \subsection{Modelowanie ruchu samolotu}
 
-Statek powietrzny jest w~sensie fizycznym bryłą sztywną o~zmieniających się w~czasie ruchu parametrach kształtu i~masy. Działają na niego siły różnego pochodzenia. Można wsród nich wymienić:
+Statek powietrzny jest w~sensie fizycznym bryłą sztywną o~zmieniających się w~czasie ruchu parametrach kształtu i~masy. Działają na niego siły różnego pochodzenia. Można wśród nich wymienić:
 \begin{description}
 \item[Grawitację ziemską] -- w~zależności od aktualnego położenia obiektu na Ziemi i~wysokości nad poziomem morza przyspieszenie ziemskie może mieć minimalnie różne wartości. Spowodowane to jest odległością od środka Ziemi i~siły odśrodkowej wywołanej jej ruchem obrotowym.
-\item[Siłę nośną] -- skrzydła samolotu poruszające się w~ściśliwym płynie takim, jakim jest powietrze, wytwarzają siłę przeciwną do siły grawitacji. Pozwala to na unoszenie się obiektu nad Ziemią. Wartość siły nośnej zależy od profilu skrzydła, jego powierzchni, prędkości w~ośrodku, kąta natarcia, ciśnienia atmosferycznego, temperatury, wychylenia klap i~skrzeli (slotów). Obroty samolotu wokół jego osi są powodowane przez różnice w~sile nośnej wytwarzanej przez poszczególne powierzchnie. Wychylanie lotek powoduje różnice siły nośnej na skrzydłach, co skutkuje przechylaniem się samolotu na boki. Usterzenie na statecznikach pionowych i~poziomych samolot obiekt odpowiednio w~osi pionowej i~wdłuż skrzydeł. Pozycja poszczególnych powierzchni sterujących może być utrzymana poprzez użycie trymeru.
-\item[Opór powietrza] -- ruch obiektu w~atmosferze wymaga użycia siły do przesuwania napotkanych molekułów. Siła ta rośnie wraz ze wzrostem gęstości ośrodka i~prędkości przesuwania się w~nim.
+\item[Siłę nośną] -- skrzydła samolotu poruszające się w~ściśliwym ośrodku takim, jakim jest powietrze, wytwarzają siłę przeciwną do siły grawitacji. Pozwala to na unoszenie się obiektu nad Ziemią. Wartość siły nośnej zależy od profilu skrzydła, jego powierzchni, prędkości w~ośrodku, kąta natarcia, ciśnienia atmosferycznego, temperatury, wychylenia klap i~skrzeli (slotów). Obroty samolotu wokół jego osi są powodowane przez różnice w~sile nośnej wytwarzanej przez poszczególne powierzchnie. Wychylanie lotek powoduje różnice siły nośnej na skrzydłach, co skutkuje przechylaniem się samolotu na boki. Usterzenie na statecznikach pionowych i~poziomych obraca samolot odpowiednio w~osi pionowej i~wzdłuż skrzydeł. Pozycja poszczególnych powierzchni sterujących może być utrzymana poprzez użycie trymeru.
+\item[Opór powietrza] -- ruch obiektu w~ośrodku gazowym wymaga użycia siły do przesuwania napotkanych molekułów. Siła ta rośnie wraz ze wzrostem gęstości ośrodka i~prędkości przesuwania się w~nim.
 \item[Ciąg] -- siła ciągu jest wynikiem działania silników. Planuje się implementacje trzech różnych rodzajów napędu: śmigłowy, odrzutowy i~rakietowy. Moc ciągu zależy od tempa spalania paliwa, gęstości powietrza i~od indywidualnych właściwości silnika. Przy locie wznoszącym lub opadającym ciąg ma wpływ na siłę nośną statku.
 \item[Hamowanie] -- statek powietrzny może być wyhamowywany na cztery różne sposoby: przez użycie spojlerów, odwracaczy ciągu, hamulców w~kołach (tylko po przyziemieniu) oraz przez odpowiednie manewrowanie całym samolotem.
 \item[Kontakt z~podłożem] -- podwozie samolotu działa podobnie do sprężyny. Przyziemienie powoduje przyłożenie do kadłuba siły skierowanej pionowo w~górę.
@@ -145,13 +155,13 @@ W~każdym z~przypadków, wpływ na rzeczywiste odczyty temperatury, wilgotności
 Ze względów etycznych po rozbiciu samolotu zostanie wygenerowany jedynie komunikat mówiący o~jego zniszczeniu. Nieprzewidywane są żadne animacje katastrofy i~wraku. Kolizje z~terenem poza miejscem lądowania będą wykrywane mniej dokładnie oraz będą od razu przerywały symulację lotu. W~przypadku lotnisk informacja o~kolizji będzie wyświetlana w~wyniku przeciążenia podwozia lub dotknięcia ziemi innym elementem maszyny. Zarówno zbliżenia do terenu lotniska, jak i~do innych obiektów będą symulowane z~najwyższą szczegółowością.
 
 \subsection{Dane techniczne samolotów}
-Program ma umożliwiać korzystanie z~różnych modeli samolotów. Niekoniecznie muszą one być dostarczone przez wytwórcę symulatora. Dane konfiguracyjne powinny spełniać specyfikację ze strony \url{http://msdn.microsoft.com/en-us/library/cc526949.aspx} .
+Program ma umożliwiać korzystanie z~różnych modeli samolotów. Niekoniecznie muszą one być dostarczone przez wytwórcę symulatora. Dane konfiguracyjne powinny spełniać specyfikację ze strony \url{http://msdn.microsoft.com/en-us/library/cc526949.aspx}.
 
 \subsection{Topografia Ziemi}
 Przewiduje się symulację lotu w~realnym świecie. Ukształtowanie terenu, jeziora, morza i~położenie lotnisk będą czytane z~map. Kształt Ziemi powinien być elipsoidą obrotową spłaszczoną na biegunach, por. system odniesienia WGS-84.
 
-\subsection{Pomoce nawigacyjne}
-Symulator powinien modelować zachowanie się niektórych pomocy nawigacyjnych, m.in. map, kompasu, wysokościomierza barometrycznego, radiowysokościomierza, prędkościomierza, wariometru, sztucznego horyzontu oraz systemów ILS, VOR, DME, NDB, TCAS, TAWS i~GPS.
+\subsection{Przyrządy nawigacyjne}
+Symulator powinien modelować zachowanie się niektórych przyrządów nawigacyjnych, m.in. map, kompasu, wysokościomierza barometrycznego, radiowysokościomierza, prędkościomierza, wariometru, sztucznego horyzontu oraz systemów ILS, VOR, DME, NDB, TCAS, TAWS i~GPS.
 
 \subsection{Generowanie grafiki}
 W programie umożliwiony będzie podgląd świata z~kabiny pilota, jak i~z zewnątrz samolotu. Sceneria będzie przedstawiała podstawową rzeźbę terenu, urządzenia na lotnisku oraz inne pojazdy i~statki powietrzne. Dodatkowo podczas widoku kokpitu przedstawione bedą wszystkie przyrządy pokładowe.
@@ -160,7 +170,7 @@ W programie umożliwiony będzie podgląd świata z~kabiny pilota, jak i~z zewn�
 Użytkownik będzie mógł sterować statkiem, używając myszy, joysticka i~klawiatury. Mysz będzie pomagała w~rozglądaniu się, joystick w~ręcznym sterowaniu samolotem, a~klawiatura w~szczegółowych ustawieniach lotu.
 
 \subsection{Kontrola lotów}
-Osobną pomocą nawigacyjną jest automatyczna kontrola lotów. Będzie ona przeprowadzana w~trybie tekstowym w~angielskim języku lotniczym.
+Osobną pomocą nawigacyjną jest automatyczna kontrola lotów. Będzie ona dokonywana w~trybie tekstowym w~angielskim języku lotniczym.
 
 \subsection{Inne pojazdy}
 Implementacji wymaga ruch służb lotniskowych, np. cystern, samochodów, holowników, itd.
@@ -169,19 +179,19 @@ Implementacji wymaga ruch służb lotniskowych, np. cystern, samochodów, holown
 Ważnym elementem przed startem maszyny jest zaplanowanie lotu. Symulator będzie umożliwiał graficzne zaplanowanie trasy przelotu i~ilości paliwa.
 
 \subsection{Interfejs użytkownika}
-Interfejs użytkownika powinien pozwalać w~trybie okienkowym na skonfigurowanie parametrów symulacji. w~szczególności jest to: wybór samolotu, dnia, godziny, miejsca startu, pogody, trasy lotu, ilości paliwa i~liczby pasażerów.
+Interfejs użytkownika powinien umożliwiać skonfigurowanie w trybie okienkowym parametrów symulacji. W~szczególności chodzi tu o: wybór samolotu, dnia, godziny, miejsca startu, pogody, trasy lotu, ilości paliwa i~liczby pasażerów.
 
 \subsection{Gra online}
 Użytkownicy będą mogli współpracować ze sobą i~widzieć się nawzajem, grając poprzez Sieć.
 
 \section{Scenariusze użycia}
 Przewiduje się pięć różnych trybów gry.
-\subsection{Wolny lot}
-W tym trybie jedynym celem użytkownika jest pilotowanie samolotu, wykonywanie akrobacji, testowanie osiągów, trening pilotażu w~trudnych warunkach pogodowych, itp. Nie buduje się planu lotu, ani nie działa kontrola lotów. w~przestrzeni nie ma także innych statków powietrznych.
+\subsection{Lot dowolny}
+W tym trybie jedynym celem użytkownika jest pilotowanie samolotu, wykonywanie akrobacji, testowanie osiągów, trening pilotażu w~trudnych warunkach pogodowych, itp. Nie buduje się planu lotu, ani nie działa kontrola lotów. W~przestrzeni nie ma także innych statków powietrznych.
 \subsection{Przelot według planu lotu}
 Scenariusz ten najbardziej odzwierciedla realną pracę pilota. Gra zaczyna się przy hangarze na płycie lotniska. Użytkownik powinien utworzyć plan lotu, zatankować, zabrać ładunek lub pasażerów, uzyskać pozwolenie na lot i~start, stosować się do poleceń kontroli lotów i~prawa lotniczego. Może napotkać inne, kontrolowane przez komputer, samoloty.
 \subsection{Tryb wielu graczy}
-Symulacja podobna jest do opisanej w p. 2. 3. 2. z~tą różnicą, że uczestniczyć w~niej może kilku rzeczywistych użytkowników.
+Symulacja podobna jest do opisanej w p. 2.3.2 z~tą różnicą, że uczestniczyć w~niej może kilku rzeczywistych użytkowników.
 \subsection{Samouczek}
 Tryb treningowy pozwalający na praktykę sztuki pilotażu i~poznawanie pomocy nawigacyjnych.
 \subsection{Misje}
@@ -192,47 +202,48 @@ Z definicji gra jest dokładnym symulatorem i~jej celem nie jest zabawianie, tyl
 
 \chapter{Harmonogram}
 Harmonogram ,,Symulatora lotu'' został sporządzony przy użyciu powszechnie stosowanych metod szacowania rozmiaru i~pracochłonności oprogramowania oraz na podstawie wiedzy członków zespołu. Do wyznaczenia wielkości projektu użyto metody punktów funkcyjnych i~na jej podstawie stwierdzono, że kod programu będzie miał ok. 50-60 tysięcy wierszy. Następnie, za pomocą metody COCOMO~II obliczono przybliżoną pracochłonność całego projektu (wyniosła ok. 180 osobomiesięcy) oraz jego poszczególnych części składowych. Do tego wyniku dodano 20 osobomiesięcy buforu związanego z urlopami pracowników i~innymi niemożliwymi do przewidzenia zdarzeniami. Przy założeniu, że zespół programistów będzie liczył 10 osób, wykonanie oprogramowania powinno zająć niecałe dwa lata.
-Poniższy harmonogram przedstawia planowany przebieg prac nad projektem i~ze względu na wczesną fazę prac jest obłożony dużą niedokładnością. Jego dokładniejsza wersja powstanie w~fazie analizy.
+Poniższy harmonogram (tab. \ref{harmonogram}) przedstawia planowany przebieg prac nad projektem i~ze względu na~wczesną fazę prac jest obłożony dużą niedokładnością. Jego dokładniejsza wersja powstanie w~fazie analizy.
 
 \begin{sidewaystable}
+    \caption{Koszt poszczególnych etapów kontrukcji oprogramowania}
     \begin{center}
         \begin{tabular}{|p{7cm}|r|r|r|r|r|} \hline
             \multicolumn{1}{|m{7cm}|}{\centering Funkcja}                                                                        &
-            \multicolumn{1}{m{2,5cm}|}{\centering Koszt w punktach funkcyjnych}                                                  &
-            \multicolumn{1}{m{4cm}|}{\centering Koszt w punktach funkcyjnych po uwzględnieniu wsp. wpływu}                       &
+            \multicolumn{1}{m{2,5cm}|}{\centering Koszt w~punktach funkcyjnych}                                                  &
+            \multicolumn{1}{m{4cm}|}{\centering Koszt w~punktach funkcyjnych po~uwzględnieniu wsp. wpływu}                       &
             \multicolumn{1}{m{2,5cm}|}{\centering Liczba wierszy kodu}                                                           &
             \multicolumn{1}{m{2,5cm}|}{\centering Osobomiesiące}                                                                 &
-            \multicolumn{1}{m{4cm}|}{\centering Osobomiesiące z uwzględnieniem buforu na nieprzewidziane zdarzenia}              \\ \hline
+            \multicolumn{1}{m{4cm}|}{\centering Osobomiesiące z~uwzględnieniem buforu na~nieprzewidziane zdarzenia}              \\ \hline
 
-            implementacja silnika fizyki                                        & 118     & 112     & 5935     & 20,49   & 22,78 \\
-            implementacja warunków pogodowych                                   & 124     & 118     & 6257     & 21,70   & 24,13 \\
-            wyświetlanie warunków pogodowych                                    & 49      & 47      & 2484     & 7,93    & 8,81  \\
-            implementacja i wyświetlanie zmiennych warunków pogodowych          & 58      & 55      & 2898     & 9,38    & 10,43 \\
-            implementacja podstawowego silnika lotu                             & 57      & 54      & 2852     & 9,22    & 10,24 \\
-            implementacja podstawowego silnika graficznego                      & 62      & 59      & 3128     & 10,19   & 11,33 \\
-            wykrywanie kolizji                                                  & 51      & 49      & 2576     & 8,25    & 9,17  \\
-            wczytywanie i wyświetlanie map                                      & 98      & 93      & 4923     & 16,71   & 18,58 \\
-            implementacja infrastruktury pomocniczej                            & 92      & 88      & 4647     & 15,69   & 17,44 \\
-            wyświetlanie infrastruktury pomocniczej                             & 45      & 43      & 2254     & 7,13    & 7,93  \\
-            implemantacja interfejsu użytkownika                                & 59      & 56      & 2990     & 9,70    & 10,79 \\
-            implementacja obługi alternatywnych kontrolerów                     & 45      & 43      & 2254     & 7,13    & 7,93  \\
-            wczytywaie modeli samolotów                                         & 101     & 95      & 5061     & 17,22   & 19,15 \\
-            implementacja lądowania                                             & 107     & 102     & 5383     & 18,42   & 20,48 \\
+            Implementacja symulacji dynamiki newtonowskiej                      & 118     & 112     & 5935     & 20,49   & 22,78 \\
+            Implementacja warunków pogodowych                                   & 124     & 118     & 6257     & 21,70   & 24,13 \\
+            Wyświetlanie warunków pogodowych                                    & 49      & 47      & 2484     & 7,93    & 8,81  \\
+            Implementacja i wyświetlanie zmiennych warunków pogodowych          & 58      & 55      & 2898     & 9,38    & 10,43 \\
+            Implementacja podstawowego mechanizmu lotu                          & 57      & 54      & 2852     & 9,22    & 10,24 \\
+            Implementacja podstawowego mechanizmu graficznego                   & 62      & 59      & 3128     & 10,19   & 11,33 \\
+            Wykrywanie kolizji                                                  & 51      & 49      & 2576     & 8,25    & 9,17  \\
+            Wczytanie i wyświetlanie map                                        & 98      & 93      & 4923     & 16,71   & 18,58 \\
+            Implementacja infrastruktury pomocniczej                            & 92      & 88      & 4647     & 15,69   & 17,44 \\
+            Wyświetlanie infrastruktury pomocniczej                             & 45      & 43      & 2254     & 7,13    & 7,93  \\
+            Implemantacja interfejsu użytkownika                                & 59      & 56      & 2990     & 9,70    & 10,79 \\
+            \fixedspaceword{Implementacja obługi alternatywnych kontrolerów}    & 45      & 43      & 2254     & 7,13    & 7,93  \\
+            Wczytanie modeli samolotów                                          & 101     & 95      & 5061     & 17,22   & 19,15 \\
+            Implementacja lądowania                                             & 107     & 102     & 5383     & 18,42   & 20,48 \\
             \hline
             \hfill suma                                                         & 1065    & 1012    & 53642    & 179,17  & 199,17\\ \hline
         \end{tabular}
     \end{center}
-    \caption{Koszt poszczególnych etapów kontrukcji oprogramowania}
 \end{sidewaystable}
 
 \begin{table}
+    \caption{Współczynniki wpływu dla metody punktów funkcyjnych}
     \begin{center}
         \begin{tabular}{|p{10cm}|r|} \hline
         \multicolumn{1}{|m{10cm}|}{\centering Współczynniki wpływu }                                           &
         \multicolumn{1}{m{2cm}|}{\centering Punkty}                                                            \\ \hline
 
         Czy wymagane jest przesyłanie danych?                                                           & 4    \\
-        Czy są funkcje przetwarzania rozproszonego?                                                     & 0    \\
+        Czy występują funkcje przetwarzania rozproszonego?                                              & 0    \\
         Czy wydajność ma kluczowe znaczenie?                                                            & 4    \\
         Czy system ma działać w mocno obciążonym środowisku operacyjnym?                                & 3    \\
         Czy system wymaga wprowadzania danych online?                                                   & 0    \\
@@ -240,20 +251,20 @@ Poniższy harmonogram przedstawia planowany przebieg prac nad projektem i~ze wzg
         Czy kod ma być przystosowany do ponownego użycia?                                               & 2    \\
         Czy wejścia, wyjścia, pliki i zapytania są złożone?                                             & 3    \\
         Czy wprowadzenie danych on-line wymaga transakcji obejmujących wiele ekranów lub operacji?      & 3    \\
-        Czy pliki główne są aktualizowane  on-line?                                                     & 2    \\
+        Czy pliki główne są aktualizowane on-line?                                                      & 2    \\
         Czy system ma mieć automatyczne konwersje i instalacje?                                         & 4    \\
         Czy system wymaga mechanizmu kopii zapasowych i odtwarzania?                                    & 3    \\
-        Czy system jest projektowany dla wielu instalacji w różnych organizacjach?                      & 4    \\
-        Czy aplikacja jest projektowana aby wspomagać zmiany i być łatwą w użyciu przez użytkownika?    & 2    \\ \hline
+        Czy system jest projektowany dla wielu instalacji w różnych przedsiębiorstwach?                 & 4    \\
+        Czy aplikacja jest projektowana, aby wspomagać zmiany i być łatwą w użyciu przez użytkownika?   & 2    \\ \hline
         \hfill Suma                                                                                     & 39   \\ \hline
         \hfill Współczynnik wpływu                                                                      & 0,95 \\ \hline
 
         \end{tabular}
     \end{center}
-    \caption{Współczynniki wpływu dla metody punktów funkcyjnych}
 \end{table}
 
 \begin{table}
+    \caption{Współczynniki metody COCOMO II}
     \begin{center}
         \begin{tabular}{|l|l|} \hline
         \multicolumn{1}{|m{10cm}|}{\centering Współczynniki COCOMO II } &
@@ -265,12 +276,11 @@ Poniższy harmonogram przedstawia planowany przebieg prac nad projektem i~ze wzg
         Dojrzałość procesu wytwarzania  & 4,68 \\ \hline
         \end{tabular}
     \end{center}
-    \caption{Współczynniki dla metody COCOMO II}
 \end{table}
 
 \begin{table}
 	\centerline{\includegraphics*[scale=0.8]{harmonogram-tabela.pdf}}
-	\caption{Harmonogram projektu}
+	\caption{Harmonogram projektu\label{harmonogram}}
 \end{table}
 
 \chapter{Kosztorys}
@@ -282,21 +292,21 @@ Planujemy oddać część pracy w~ręce zewnętrznych podwykonawców. Dlatego do
 \subsection{Zespół stacjonarny}
 
 \begin{itemize}
-\item 10 programistów C++
-\item 2 kierowników zespołów
-\item 4 testerów oprogramowania
+\item 10 programistów C++,
+\item 2 kierowników zespołów,
+\item 4 testerów oprogramowania.
 \end{itemize}
 
 \subsection{Zespół niestacjonarny}
 
 \begin{itemize}
-\item 2 grafików 2D
-\item 2 grafików 3D
+\item 2 grafików 2D,
+\item 2 grafików 3D.
 \end{itemize}
 
 \section{Miesięczne wynagrodzenia brutto pracowników}
 
-Poniższa lista została sporządzona na bazie danych pochodzących z raportu \emph{Wynagrodzenia na stanowiskach IT w~2012 roku} wydanego przez kancelarię Sedlak \& Sedlak.\footnote{\url{http://wynagrodzenia.pl}} \\
+Poniższa lista została sporządzona na podstawie danych pochodzących z raportu \emph{Wynagrodzenia na stanowiskach IT w~2012 roku} wydanego przez kancelarię Sedlak \& Sedlak.\footnote{\url{http://wynagrodzenia.pl}} \\
 
 \begin{tabular}{lr}
 programista C++ & 6500 zł \\

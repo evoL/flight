@@ -59,6 +59,7 @@
 Data & Wersja & Autor & Opis zmian \\ \hline
 2013-12-11 & 1.0 & Krzysztof Wróbel & Utworzenie dokumentu \\
 2014-01-06 & 1.1 & Krzysztof Wróbel & Poprawki stylistyczne \\
+2014-01-21 & 1.2 & Rafał Hirsz & Poprawki stylistyczne \\
 \hline
 \end{tabularx}
 \end{center}
@@ -75,23 +76,23 @@ Symulator jest grą komputerową przeznaczoną zarówno dla użytkowników z~zer
 
 \section{Nowicjusz}
 
-Scenariusz gry dla osoby nieposiadającej wiedzy z~zakresu lotnictwa przewiduje lekcje podstawowych technik pilotażu lekkich samolotów. Lekcje dotyczą startu i~lądowania, lotu poziomego, zakrętów, podchodzenia do lądowania i~kołowania. Dostępne są także podstawowe misje zręczonościowe oraz swobodny lot.
+Scenariusz gry dla osoby nieposiadającej wiedzy z~zakresu lotnictwa przewiduje lekcje podstawowych technik pilotażu lekkich samolotów. Lekcje dotyczą startu i~lądowania, lotu poziomego, zakrętów, podchodzenia do lądowania i~kołowania. Dostępne są także podstawowe misje zręczonościowe oraz lot dowolny.
 
 \section{Entuzjasta lotnictwa}
 
-Zakłada się, że entuzjaści lotnictwa chcą maksymalnie zgłębić swoją wiedzę o~pilotażu. Grupie tej oferowany jest pełny cykl artykułów, samouczków i~lekcji z~następujących dziedzin: ogólna wiedza o~samolocie, prawo lotnicze, zasady ruchu lotniczego, osiągi i~planowanie lotu, meteorologia, nawigacja, procedury operacyjne, zasady lotu, łączność oraz ogólne bezpieczeństwo lotu. Przygotowane są misje o~narastającym poziomie trudności. Przewiduje się, że po ukończeniu kursu entuzjaści będą w~stanie wykonać zadania przeznaczone dla pilotów w~realnym świecie.
+Zakłada się, że entuzjaści lotnictwa chcą maksymalnie zgłębić swoją wiedzę o~pilotażu. Grupie tej jest oferowany pełny cykl artykułów, samouczków i~lekcji z~następujących dziedzin: ogólna wiedza o~samolocie, prawo lotnicze, zasady ruchu lotniczego, osiągi i~planowanie lotu, meteorologia, nawigacja, procedury operacyjne, zasady lotu, łączność oraz ogólne bezpieczeństwo lotu. Przygotowane są misje o~narastającym poziomie trudności. Przewiduje się, że po ukończeniu kursu entuzjaści będą w~stanie wykonać zadania przeznaczone dla pilotów w~realnym świecie.
 
 \section{Pilot w~realnym świecie}
 
-Program z~założenia ma jak najlepiej symulować rzeczywisty lot. Jego użytkownicy z~licencją pilota mogą cieszyć się realną symulacją przy nieporównywalnie niższych kosztach od podróży samolotem lub wynajęcia prawdziwego symulatora. Gracze mogą sprawdzić swoje umiejętności w~ każdych warunkach pogodowych i~w~każdym miejscu na Ziemi. Dodatkowo mogą być zaaranżowane nieprzewidziane usterki oraz problemy z~pasażerami na pokładzie. Licencjonowany pilot będzie używał wszystkich elementów gry. W~szczególności jest tutaj mowa o~dokładnym zaplanowaniu trasy lotu i~załadowania samolotu, manewrach na lotnisku, kontroli lotów, nawigowaniu, przestrzeganiu procedur lotniczych, używaniu map, schematów oraz list kontrolnych. Dla tej grupy graczy są przygotowane skomplikowane misje przedstawiające sytuacje, z~jakimi spotykają się prawdziwi piloci.
+Program z~założenia ma jak najlepiej symulować rzeczywisty lot. Jego użytkownicy z~licencją pilota mogą cieszyć się symulacją rzeczywistego lotu przy nieporównywalnie niższych kosztach od podróży samolotem lub wynajęcia prawdziwego symulatora. Gracze mogą sprawdzić swoje umiejętności w~każdych warunkach pogodowych i~w~każdym miejscu na Ziemi. Dodatkowo mogą być zaaranżowane nieprzewidziane usterki oraz problemy z~pasażerami na pokładzie. Licencjonowany pilot będzie używał wszystkich elementów gry. W~szczególności jest tutaj mowa o~dokładnym zaplanowaniu trasy lotu i~załadowania samolotu, manewrach na lotnisku, kontroli lotów, nawigowaniu, przestrzeganiu procedur lotniczych, używaniu map, schematów oraz list kontrolnych. Dla tej grupy graczy są przygotowane skomplikowane misje przedstawiające sytuacje, z~którymi spotykają się prawdziwi piloci.
 
 \chapter{Wymagania funkcjonalne}
 
 \section{Konfiguracja gry}
 
-\subsection{Konfiguracja swobodnego lotu}
+\subsection{Konfigurowanie lotu dowolnego}
 
-Przed rozpoczęciem symulacji swobodnego lotu należy określić:
+Przed rozpoczęciem symulacji lotu dowolnego należy określić:
 \begin{itemize}
 \item używany samolot,
 \item miejsce startu,
@@ -106,7 +107,7 @@ oraz opcjonalnie:
 \end{itemize}
 
 \subsubsection{Wybór samolotu}
-Gracz wybiera samolot na podstawie jego wytwórcy (np. Boeing), rodziny (np. 737) i~modelu (np. 737-800). Może wybrać także jego malowanie (jeżeli jest dostępne więcej niż jedno). Podczas wyboru maszyny gracz powinien być poinformowany o~jej podstawowych osiągach. Wybór jest przedstawiany graficznie.
+Gracz wybiera samolot na podstawie jego wytwórcy (np. Boeing), rodziny (np. 737) i~modelu (np. 737-800). Może wybrać także jego pomalowanie (jeżeli jest dostępne więcej niż jedno). Podczas wyboru maszyny gracz powinien być poinformowany o~jej podstawowych osiągach. Wybór jest przedstawiany graficznie.
 
 \subsubsection{Wybór miejsca startu}
 Użytkownik określa lotnisko, z~którego ma się rozpocząć symulacja. Dostępne są następujące kryteria wyszukiwania:
@@ -135,7 +136,7 @@ Użytkownik ma do wyboru następujące scenariusze pogodowe:
 \begin{itemize}
 \item predefiniowany -- wybiera się konkretny zestaw zjawisk atmosferycznych (np. mroźny, bezchmurny dzień lub ulewny deszcz),
 \item odpowiedni dla miejsca i~pory symulacji -- pogoda jest określana na podstawie klimatu miejsca startu,
-\item aktualizowany -- pogoda jest aktualizowana na bieżące na podstawie zewnętrznych źródeł.
+\item aktualizowany -- pogoda jest aktualizowana na bieżąco, na podstawie zewnętrznych źródeł.
 \end{itemize}
 
 \subsubsection{Określenie ładunku samolotu}
@@ -150,7 +151,7 @@ W~skład określenia ładunku samolotu wchodzą:
 \subsubsection{Opracowanie planu lotu}
 W~celu opracowania planu lotu gracz musi podać następujące informacje:
 \begin{itemize}
-\item lotnisko docelowe -- wybierane w~podobny sposób, jak lotnisko startu,
+\item lotnisko docelowe -- wybierane w~podobny sposób jak lotnisko startu,
 \item tryb lotu:
 \begin{itemize}
 \item lot IFR,
@@ -178,7 +179,7 @@ Dodatkowo istnieje możliwość spowodowania losowej usterki.
 
 \subsection{Wybór misji}
 
-Użytkownik ma możliwość wyboru konkretnego zadania do wykonania podczas symulacji, tzw. misji. Nazwy misji są posortowane według stopnia trudności. W~podglądzie jest widoczny krótki opis i~szacowany czas ukończenia. Po wybraniu misji graczowi przedstawiane są szczegóły, mapy i~diagramy potrzebne do jej ukończenia. Podczas wyboru misji nie ma możliwości konfiguracji swobodnego lotu.
+Użytkownik ma możliwość wyboru konkretnego zadania do wykonania podczas symulacji, tzw. misji. Nazwy misji są posortowane według stopnia trudności. W~podglądzie jest widoczny krótki opis misji i~szacowany czas jej ukończenia. Po wybraniu misji graczowi są przedstawiane szczegóły, mapy i~schematy potrzebne do jej ukończenia. Podczas wyboru misji nie ma możliwości skonfigurowania lotu swobodnego.
 
 \subsection{Szkoła}
 W szkole dostępne są lekcje pilotażu w~formie pisemnej (strony HTML) i~symulacji (podobne do misji).
@@ -200,8 +201,8 @@ Dokumenty dotyczące samolotów powinny być wyszukiwane według modelu samolotu
 
 \subsection{Sterowanie}
 
-W tabeli \ref{T:Sterowanie_klawiatura} zestawiono klawisze i~skutki ich naciśnięcia. W~tabeli \ref{T:Sterowanie_joystickiem} przedstawiono zdarzenia towarzyszące danym ruchom joysticka.\\
-Dodatkowo jest możliwe sterowanie symulatorem za pomocą myszy. Klikanie w~konkretne elementy kokpitu daje takie same efekty, jak użycie ich w~prawdziwym samolocie.
+W tabeli \ref{T:Sterowanie_klawiatura} zestawiono klawisze służące do sterowania grą i~skutki ich naciśnięcia. W~tabeli \ref{T:Sterowanie_joystickiem} przedstawiono zdarzenia towarzyszące danym ruchom joysticka.\\
+Dodatkowo jest możliwe sterowanie symulatorem za pomocą myszy. Klikanie konkretnych elementów kokpitu daje takie same efekty, jak użycie ich w~prawdziwym samolocie.
 
 \begin{center}
 \begin{table}[h]
@@ -211,7 +212,7 @@ Dodatkowo jest możliwe sterowanie symulatorem za pomocą myszy. Klikanie w~konk
 \begin{tabularx}{1\textwidth}{|l|X|}
 \hline
 Klawisz(e) & Skutek \\ \hline
-\texttt{Esc} & Zakończenie symulacji \\
+\texttt{Esc} & Zakończenie symulacji lub zamknięcie ekranu szczegółowego widoku \\
 \texttt{P} & Pauza \\
 \texttt{F1} & Ciąg zerowy \\
 \texttt{F2} & Zmniejszenie ciągu \\
@@ -255,7 +256,7 @@ Zdarzenie & Skutek \\ \hline
 Wychylenie do przodu & Opuszczenie krawędzi spływu statecznika poziomego \\
 Wychylenie do tyłu & Opuszczenie krawędzi natarcia statecznika poziomego \\
 Wychylenie w~prawo & Wychylenie lotek na prawym i~lewym skrzydle, odpowiednio, do dołu i~do góry \\
-Wychylenie w~prawo & Wychylenie lotek na prawym i~lewym skrzydle, odpowiednio, do góry i~do dołu \\
+Wychylenie w~lewo & Wychylenie lotek na prawym i~lewym skrzydle, odpowiednio, do góry i~do dołu \\
 Obrót w~prawo & Wychylenie lotki na stateczniku pionowym w~prawo \\
 Obrót w~lewo & Wychylenie lotki na stateczniku pionowym w~lewo \\
 \hline
@@ -272,7 +273,7 @@ Kontrola lotów jest prowadzona w~osobnym oknie dialogowym w~trybie tekstowym. J
 
 \section{Realizm}
 \subsection{Realizm fizyczny}
-Kładzie się nacisk na dokładność realizacji silnika fizycznego. Obliczony tor ruchu bryły sztywnej, na którą działają siły zewnętrzne powinien w~możliwie najmniejszym stopniu różnić się od teoretycznego modelu newtonowskiego.\\
+Kładzie się nacisk na dokładność symulacji dynamiki newtonowskiej. Obliczony tor ruchu bryły sztywnej, na którą działają siły zewnętrzne powinien w~możliwie najmniejszym stopniu różnić się od teoretycznego modelu newtonowskiego.\\
 Działanie poszczególnych części samolotu powinno być odwzorowane według najprecyzyjniejszych znanych modeli.
 \subsection{Realizm graficzny}
 Należy zadbać o~dokładne wyobrażenia samolotów, lotnisk, terenu, naziemnych pomocy nawigacyjnych, budynków, a~także urządzeń wewnątrz kokpitu.
