@@ -7,6 +7,10 @@
 \usepackage{tabularx}
 \usepackage{hyperref}
 
+\makeatletter
+\let\ps@closing\ps@plain
+\makeatother
+
 \renewcommand{\labelitemi}{$\bullet$}
 \setlength{\parindent}{0cm}
 \addto\captionspolish{\renewcommand{\tablename}{Tabela}}
