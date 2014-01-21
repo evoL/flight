@@ -18,7 +18,7 @@
 \vspace*{16\baselineskip}
 
 {\Large Rafał Hirsz, Karol Wieczorek, Krzysztof Wróbel\par}
-\vspace*{\baselineskip}
+\vspace*{\baselineskip}k
 
 \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
 \rule{\textwidth}{0.4pt}\\[\baselineskip]
@@ -58,6 +58,7 @@
 \hline
 Data & Wersja & Autor & Opis zmian \\ \hline
 2014-01-05 & 1.0 & Karol Wieczorek & Utworzenie dokumentu \\
+2014-01-20 & 1.1 & Karol Wieczorek & Poprawki stylistyczne \\
 \hline
 \end{tabularx}
 \end{center}
@@ -69,65 +70,65 @@ Data & Wersja & Autor & Opis zmian \\ \hline
 \tableofcontents
 
 \chapter{Wstęp}
-Celem dokumentu jest określenie sposobów testowania Symulatora lotu oraz narzędzi użytych do tego celu. Głównym zadaniem przeprowadzanych testów jest określenie stopnia zgodności oprogramowania ze specyfikacją oraz sprawdzenie wydajności i~bezpieczeństwa programu.
+Celem dokumentu jest określenie sposobów testowania \textit{Symulatora lotu} oraz narzędzi użytych do tego celu. Głównym celem testowania jest określenie stopnia zgodności \textit{Symulatora} ze specyfikacją oraz sprawdzenie wydajności i~bezpieczeństwa programu.
 
 \section{Fazy testów}
-Testowanie Symulatora lotu zostanie przeprowadzone w~trzech fazach:
+Testowanie \textit{Symulatora lotu} odbędzie się w~trzech fazach:
 \begin{itemize}
-  \item Faza I: testy w~trakcie implementacji
-  \item Faza II: końcowe testy wewnętrzne
-  \item Faza III: otwarte beta testy
+  \item faza I: testy w~trakcie implementacji
+  \item faza II: końcowe testy wewnętrzne
+  \item faza III: testy beta
 \end{itemize}
 
 \chapter{Narzędzia}
-Do dokładnego przetestowania Symulatora lotu niezbędne będzie użycie kilku narzędzi:
+Do dokładnego przetestowania \textit{Symulatora lotu} niezbędne będzie użycie kilku narzędzi:
 \begin{itemize}
-\item \textbf{Boost Test \footnote{\url{http://www.boost.org/doc/libs/1\_55\_0/libs/test/doc/html/index.html}}} - biblioteka  wpomagająca pisanie testów, ich organizację oraz kontrolę ich wykonywania. Podczas prac nad symulatorem lotu, biblioteka ta będzie wykorzystywana do napisania prawie wszystkich testów, począwszy od testów jednostkowych, aż po testy integracyjne i~wydajnościowe.
-\item \textbf{Jenkins CI \footnote{\url{http://jenkins-ci.org/}}} - narzędzie umożliwiające ciągłą integrację (ang. \textit{continuous integration}). Główną rolą Jenkinsa będzie zautomatyzowanie wielokrotnego uruchamiania testów oraz zbieranie statystyk takich, jak ilość testów zakończonych błędami czy pokrycie kodu testami.
-\item \textbf{Bugzilla \footnote{\url{http://www.bugzilla.org/}}} - narzędzie wspierające pracę nad tworzeniem oprogramowania, w~tym wypadku posłuży do utrzymywania bazy błędów znalezionych w~trakcie testów.
+\item \textbf{Boost Test\footnote{Zob. \url{http://www.boost.org/doc/libs/1\_55\_0/libs/test/doc/html/index.html}}} -- biblioteka  wpomagająca pisanie testów, ich organizację oraz kontrolę ich wykonywania. Podczas prac nad \textit{Symulatorem lotu} biblioteka ta będzie stosowana do napisania prawie wszystkich testów, począwszy od testów jednostkowych, aż po testy integracyjne i~wydajnościowe.
+\item \textbf{Jenkins CI\footnote{Zob. \url{http://jenkins-ci.org/}}} -- narzędzie umożliwiające ciągłą integrację (ang. \textit{continuous integration}). Główną rolą Jenkinsa będzie zautomatyzowanie wielokrotnego uruchamiania testów oraz zbieranie statystyk takich, jak liczba testów zakończonych błędami czy pokrycie kodu testami.
+\item \textbf{Bugzilla\footnote{Zob. \url{http://www.bugzilla.org/}}} -- narzędzie wspomagające tworzenie oprogramowania, w~tym wypadku posłuży do utrzymywania bazy błędów znalezionych podczas testowania.
 \end{itemize}
 
 \chapter{Faza I: testy ciągłe}
-Faza I rozpocznie się z~dniem, gdy pierwszy test zostanie napisany i~zakończy się, gdy powstanie pierwsza wersja programu zawierająca \linebreak wszystkie ważne funkcje. W~jej trakcie nowe funkcje programu będą na bieżąco sprawdzane pod kątem poprawności wykonania i~zgodności z~wymaganiami, mniejszy nacisk zostanie natomiast położony na aspekty wydajności i~bezpieczeństwa. Wszelkie błędy i~odstępstwa od wymagań opisanych w~specyfikacji wymagań będą na bieżąco poprawiane.
+Faza I rozpocznie się z~dniem napisania pierwszego testu i~zakończy po powstaniu pierwszej wersji programu zawierającej wszystkie ważne funkcje. W~jej trakcie nowe funkcje programu będą na bieżąco sprawdzane pod kątem poprawności wykonania i~zgodności z~wymaganiami, mniejszy nacisk zostanie natomiast położony na aspekty wydajności i~bezpieczeństwa. Wszelkie błędy i~odstępstwa od wymagań opisanych w~specyfikacji wymagań będą na bieżąco poprawiane.
 
 \section{Testy jednostkowe}
-Testy jednostkowe to podstawowy rodzaj testów przeprowadzany dla każdej zaimplementowanej funkcji (metody). Testy te będą pisane na bieżąco przez zespół programistów pracujący nad danym zagadnieniem, ich głównym celem jest wykrycie błędów wewnątrz kodu danej funkcji oraz sprawdzenie, czy w~tzw. przypadkach brzegowych (ang. \textit{corner case}) zachowanie danej jednostki jest poprawne.
+Testy jednostkowe to podstawowy rodzaj testów wykonanych dla każdej zaimplementowanej funkcji (metody). Testy te będą pisane na bieżąco przez zespół programistów pracujący nad danym zagadnieniem, ich głównym celem jest wykrycie błędów wewnątrz kodu danej funkcji oraz sprawdzenie, czy w~tzw. przypadkach brzegowych (ang. \textit{corner case}) zachowanie danej jednostki jest poprawne.
 
 \section{Testy modułowe}
-Testy modułowe mają za zadanie sprawdzić działanie całego modułu kodu \footnote{moduł kodu - część kodu odpowiadająca za pojedynczą funkcję zdefiniowaną w~dokumencie wymagań funkcjonalnych}, a~odpowiedzialność za nie ponoszą testerzy.
+Testy modułowe mają sprawdzić działanie całego modułu kodu\footnote{Zob. moduł kodu -- część kodu odpowiadająca za pojedynczą funkcję zdefiniowaną w~dokumencie wymagań funkcjonalnych}, a~odpowiedzialność za nie ponoszą testerzy.
 
 \section{Testy integracyjne}
-Specyfikacja Symulatora lotu przewiduje iteracyjne dodawanie nowych funkcji, dlatego też istnieje konieczność przeprowadzania testów spójności nowo powstałych modułów z~obecnym, działającym i~przetestowanym już kodem. Dzięki temu wiele błędów normalnie wykrytych dopiero podczas ostatecznych testów całego programu zostanie naprawionych w~dużo wcześniejszej fazie, co ograniczy zarówno czas, jak i~koszty projektu.
+Specyfikacja \textit{Symulatora lotu} przewiduje iteracyjne dodawanie nowych funkcji, dlatego też istnieje konieczność wykonywania testów spójności nowo powstałych modułów z~obecnym, działającym i~przetestowanym kodem. Dzięki temu wiele błędów normalnie wykrytych dopiero podczas ostatecznych testów całego programu zostanie naprawionych dużo wcześniej, co ograniczy zarówno czas, jak i~koszty projektu.
 
 \chapter{Faza II: końcowe testy wewnętrzne}
-Faza II rozpoczyna się wraz z~zakończeniem fazy I, czyli po zakończeniu implementacji wszystkich funkcji systemu. Głównym celem tej fazy jest doprowadzenie programu do stanu, w~którym będzie on spełniał wszystkie postawione przed nim wymagania funkcjonalne i~niefunkcjonalne. Z~tego powodu, oprócz sprawdzanie poprawności całego programu, zwiększony zostaje nacisk na wydajność, bezpieczeństwo oraz zgodność systemu ze wspieranymi platformami. Docelowo, koniec fazy II nastąpi dopiero wtedy, gdy wszystkie wymagania będą spełnione, \linebreak a~wszystkie znalezione błędy zostaną naprawione.
+Faza II rozpoczyna się wraz z~zakończeniem fazy I, czyli po zakończeniu implementacji wszystkich funkcji systemu. Głównym celem tej fazy jest doprowadzenie programu do stanu, w~którym będzie on spełniał wszystkie postawione przed nim wymagania funkcjonalne i~niefunkcjonalne. Z~tego powodu, oprócz sprawdzanie poprawności całego programu, zwiększony zostaje nacisk na wydajność, bezpieczeństwo oraz zdolność symulatora do pracy w przewidzianych systemach operacyjnych i na przewidzianym sprzęcie. Koniec fazy II nastąpi, gdy wszystkie wymagania będą spełnione, a~wszystkie znalezione błędy zostaną naprawione.
 
 \section{Testy integracyjne}
-Po zakończeniu implementacji wymagane jest gruntowne sprawdzenie działania programu przez testy integracyjne. Testy te w~większości przypadków opierają się na scenariuszach przypadków użycia, dzięki czemu testują zachowanie programu widziane z~pozycji użytkownika.
+Po zakończeniu implementacji jest wymagane gruntowne sprawdzenie działania programu w testach integracyjnych. Testy te w~większości opierają się na scenariuszach przypadków użycia, dzięki czemu sprawdzają zachowanie programu widziane z~pozycji użytkownika.
 
 \section{Testy wydajnościowe}
-Testy wydajnościowe mają za zadanie zmierzyć wydajność programu i, w~przypadku nie satysfakcjonujących wyników, zwrócić uwagę na \linebreak aspekty wymagające poprawy. Głównymi elementami, na który zostanie postawiony nacisk podczas testowania wydajności będą:
+Testy wydajnościowe mają za zadanie zmierzyć wydajność programu i, w~przypadku nie satysfakcjonujących wyników, zwrócić uwagę na aspekty wymagające poprawy. Głównymi elementami, na który zostanie postawiony nacisk podczas testowania wydajności, będą:
 \begin{itemize}
-\item czas uruchomienia gry
-\item czas załadowania przykładowego scenariusza
-\item płynność wyświetlania obrazu (mierzona np. w~liczbie wyświetlanych klatek na sekundę)
-\item czas wczytywania danych (samolotów, map itp.) z~bazy danych
+\item czas uruchomienia gry,
+\item czas załadowania przykładowego scenariusza,
+\item płynność wyświetlania obrazu (mierzona np. w~liczbie wyświetlanych klatek na sekundę),
+\item czas wczytywania danych (samolotów, map itp.) z~bazy danych.
 \end{itemize}
 
 \section{Testy zgodności}
-Celem testów zgodnościowych jest sprawdzenie poprawności działania Symulatora lotu na wszystkich najpopularniejszych konfiguracjach \linebreak ssprzętowych (niestety ze względu na to, że program ma działać na komputerach klasy PC, niemożliwym jest przetestowanie wszystkich istniejących kombinacji sprzętowych). W~trakcie testowania zostanie zwrócona uwaga nie tylko na kompatybilność ze sprzętem, ale również z~wersjami zewnętrznego oprogramowania występującymi na poszczególnych platformach, z~którymi współpracuje program.
+Celem testów zgodnościowych jest sprawdzenie poprawności działania Symulatora lotu na wszystkich najpopularniejszych konfiguracjach \linebreak sprzętowych (niestety ze względu na to, że program ma działać na komputerach klasy PC, nie jest możliwe przetestowanie wszystkich istniejących kombinacji sprzętowych). W~trakcie testowania zostanie zwrócona uwaga nie tylko na zgodność ze sprzętem, ale również z~zewnętrznym oprogramowaniem występującym na poszczególnych platformach, z~którymi współpracuje symulator.
 
-\chapter{Faza III: beta testy}
-W momencie, gdy program spełni wszystkie wymagania oraz nie będą występować żadne błędy w~trakcie kompilacji, program wchodzi w~wersję beta. Testy tej wersji podzielone zostaną na dwa etapy:
+\chapter{Faza III: testy beta}
+Gdy \textit{Symulator lotu} spełni wszystkie wymagania funkcjonalne i niefunkcjonalne, a napotkane dotychczas błędy zostaną naprawione, osiagnie status beta. Testy tej wersji zostaną podzielone na dwa etapy:
 \begin{itemize}
-\item zamknięte beta testy
-\item otwarte beta testy
+\item zamknięte testy beta,
+\item otwarte testy beta.
 \end{itemize}
 
-\section{Zamknięte testy}
-Pierwsza faza beta testów to testy przeprowadzane przez wyselekcjonowaną grupę osób nie związanych z~firmą, ale dobrze zaznajomionych z~tematem symulatorów lotu. Celem zamkniętych testów jest przede wszystkim poznanie rzeczywistej, subiektywnej opinii użytkowników, na podstawie których przygotowany zostanie raport zawierający uwagi odnośnie poprawek które powinny zostać wprowadzone jeszcze przed udostępnieniem produktu szerszej publiczności (mogą to być np. drobne zmiany w~balansie rozgrywki czy poprawa jakości pewnych szczegółów graficznych).
+\section{Testy zamknięte}
+Pierwsza faza testów beta to testy wykonywane przez wyselekcjonowaną grupę osób nie związanych z~firmą, lecz dobrze zaznajomionych z~tematem symulatorów lotu. Celem zamkniętych testów jest przede wszystkim poznanie rzeczywistej, subiektywnej opinii użytkowników o symulatorze. Na podstawie zebranych uwag zostanie przygotowany raport zawierający wytyczne odnośnie poprawek które powinny zostać wprowadzone jeszcze przed udostępnieniem produktu szerszej publiczności (mogą to być np. drobne zmiany w zbalansowaniu poziomu trudności rozgrywki lub poprawa jakości pewnych szczegółów graficznych).
 
-\section{Otwarte testy}
-Po wprowadzeniu poprawek z~raportu, o~którym mowa w~akapicie powyżej, Symulator lotu zostanie udostępniony wszystkim użytkownikom, którzy będą chcieli przetestować ten produkt. Udostępniana wersja będzie mocno okrojona, tj. będzie zawierać nie więcej niż dwie mapy oraz dwa rodzaje samolotów, nie będzie też dostępnej szkoły pilotów oraz bilioteki (patrz \footnote{R. Hirsz, K. Wieczorek, K. Wróbel: \textit{Symulator lotu: Specyfikacja wymagań}, Wrocław, SPIO IIUwr 2014}). Będzie jednak dostępna pełna funkcjonalność symulatora lotu. Powodem wprowadzenia takiego rodzaju testów jest chęć przetestowania programu na dużo większej ilości konfiguracji sprzętowych niż podczas testów zgodnościowych oraz znalezienie błędów, które nie zostały wychwycone w~laboratoryjnych warunkach, w~jakich była przeprowadzana faza I i~II testów. Takie podejście pozwoli na dołączenie do Symulatora lotu łatki z~poprawkami jeszcze przed jego premierą, dzięki czemu wszyscy gracze będą mogli cieszyć się produktem najwyższej jakości.
+\section{Testy otwarte}
+Po wprowadzeniu poprawek z~raportu, o~którym mowa w~ p. 5.2, \textit{Symulator lotu} zostanie udostępniony wszystkim użytkownikom, którzy będą chcieli go przetestować. Udostępniana wersja będzie mocno okrojona, tj. będzie zawierać nie więcej niż dwie mapy oraz dwa rodzaje samolotów, nie będzie też dostępnej szkoły pilotów oraz biblioteki\footnote{Zob. R. Hirsz, K. Wieczorek, K. Wróbel: \textit{Symulator lotu: Specyfikacja wymagań}, Wrocław, SPIO IIUWr 2014}. Będzie jednak dostępny komplet funkcji symulatora lotu. Powodem wprowadzenia takiego rodzaju testów jest chęć przetestowania symulatora na znacznie większej liczbie konfiguracji sprzętowych niż podczas testów zgodności oraz znalezienie błędów  nie wychwyconych w~warunkach laboratoryjnych, w~których były przeprowadzane fazy I i~II testów. Takie podejście pozwoli na dołączenie do \textit{Symulatora lotu} łatki z~poprawkami jeszcze przed jego publikacją.
 
 \end{document}
