@@ -1,0 +1,92 @@
+\documentclass{mwrep}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{tgbonum}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\makeatletter
+\let\ps@closing\ps@plain
+\makeatother
+
+\renewcommand{\labelitemi}{$\bullet$}
+\setlength{\parindent}{0cm}
+\addto\captionspolish{\renewcommand{\tablename}{Tabela}}
+\setcounter{secnumdepth}{0}
+
+\newcommand{\bitem}[1]{\item R. Hirsz, K. Wieczorek, K. Wróbel: \textit{Symulator lotu: #1}, Wrocław, SPIO IIUWr 2014.}
+
+\newcommand*{\titleGP}{\begingroup
+\centering
+
+{\large Studencka Pracownia Inżynierii Oprogramowania}\\Instytut Informatyki Uniwersytetu Wrocławskiego\par
+\vspace*{16\baselineskip}
+
+{\Large Rafał Hirsz, Karol Wieczorek, Krzysztof Wróbel\par}
+\vspace*{\baselineskip}
+
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+\rule{\textwidth}{0.4pt}\\[\baselineskip]
+
+{\Huge SYMULATOR LOTU}\\[0.2\baselineskip]
+
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+\rule{\textwidth}{1.6pt}\\[\baselineskip]
+
+\scshape
+{\huge Mapa dokumentów}\par
+\vspace*{2\baselineskip}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=5\baselineskip]{flightsim-team-logo.pdf}
+\end{figure}
+\vfill
+
+{\large Wrocław 2014}\par
+
+\pagebreak
+
+\endgroup}
+
+\begin{document}
+
+\thispagestyle{empty}
+\titleGP
+
+\begin{center}
+\begin{table}[h]
+\begin{center}
+\caption{Historia zmian dokumentu}\label{T:Zmiany}
+\vspace{3ex}
+\begin{tabularx}{1\textwidth}{|l|l|l|X|}
+\hline
+Data & Wersja & Autor & Opis zmian \\ \hline
+2013-12-21 & 1.0 & Rafał Hirsz & Utworzenie dokumentu \\
+\hline
+\end{tabularx}
+\end{center}
+\end{table}
+\end{center}
+
+\section{Mapa dokumentów}
+
+\begin{enumerate}
+    \bitem{Założenia ogólne}
+    \begin{enumerate}
+        \item \textit{Słownik pojęć}
+        \item \textit{Specyfikacja symulatora lotu}
+        \item \textit{Harmonogram}
+        \item \textit{Kosztorys}
+    \end{enumerate}
+    \bitem{Specyfikacja wymagań}
+    \bitem{Architektura oprogramowania}
+    \bitem{Przypadki użycia}
+    \bitem{Plan testowania}
+    \bitem{Zasoby zewnętrzne}
+    \bitem{Mapa dokumentów}
+\end{enumerate}
+
+\end{document}
