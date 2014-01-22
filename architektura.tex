@@ -74,7 +74,7 @@ Data & Wersja & Autor & Opis zmian \\ \hline
 
 \chapter{Ogólny opis architektury}
 
-Kod źródłowy \textit{Symulatora lotu} zostanie napisany w~języku C++. W~celu zapewnienia płynności rozgrywki zostanie wykorzystana biblioteka OpenGL, pozwalająca na~pełne wykorzystanie możliwości nowoczesnych kart graficznych. Motywacją do~wyboru tych narzędzi jest ich dojrzałość, duże możliwości dostosowania do potrzeb oraz popularność wśród programistów.
+Kod źródłowy \textit{Symulatora lotu} zostanie napisany w~języku C++. W~celu zapewnienia płynności rozgrywki zostanie wykorzystana biblioteka \linebreak OpenGL, pozwalająca na~pełne wykorzystanie możliwości nowoczesnych kart graficznych. Motywacją do~wyboru tych narzędzi jest ich dojrzałość, duże możliwości dostosowania do potrzeb oraz popularność wśród programistów.
 
 \vspace{1em}
 \textit{Symulator lotu} będzie składał się z następujących modułów:
@@ -101,13 +101,13 @@ Mechanizm graficzny jest podstawową jednostką odpowiedzialną za~wyświetlanie
 \footnotetext[1]{Patrz \cite{zalozenia}, \textit{Słownik pojęć}}
 
 \section{Symulator dynamiki newtonowskiej}
-Symulator dynamiki newtonowskiej pozwala na~przeprowadzenie obliczeń związanych z~zachowaniem się obiektów w~trójwymiarowej przestrzeni zgodnym z rzeczywistością. Moduł ten będzie napisany z~uwzględnieniem szczególnej dokładności wyników obliczeń potrzebnej do~odwzorowania wszystkich aspektów symulacji lotu.
+Symulator dynamiki newtonowskiej pozwala na~przeprowadzenie obliczeń związanych z~zachowaniem się obiektów w~trójwymiarowej przestrzeni zgodnym z rzeczywistością. Moduł ten będzie napisany \linebreak z~uwzględnieniem szczególnej dokładności wyników obliczeń potrzebnej do~odwzorowania wszystkich aspektów symulacji lotu.
 
 \section{System czytania zasobów graficznych}
 System czytania zasobów graficznych rozszerza silnik graficzny o~możliwość użycia zewnętrznych grafik i~modeli w symulatorze. Pozwala on~grafikom na~wygodne tworzenie zasobów w~zewnętrznych programach, zapewniając obsługę popularnych formatów graficznych: OpenEXR, PNG, OBJ, COLLADA. System ten będzie napisany w~sposób modułowy w~celu umożliwienia łatwej rozbudowy go o~obsługę innych formatów.
 
 \section{Interfejs użytkownika}
-Interfejs użytkownika używa mechanizmu graficznego do~narysowania elementów składowych interfejsu użytkownika, takich~jak przyciski, etykiety, czy pola tekstowe, oraz obsługi klawiatury i~myszy. Będzie~to osobny moduł, zależny jedynie od~mechanizmu graficznego.
+Interfejs użytkownika używa mechanizmu graficznego do~narysowania elementów składowych interfejsu użytkownika, takich~jak przyciski, etykiety, czy pola tekstowe, oraz obsługi klawiatury i~myszy. Będzie~to \linebreak osobny moduł, zależny jedynie od~mechanizmu graficznego.
 
 \section{Środowisko symulacji}
 Środowisko sytuacji łączy pozostałe moduły, umożliwiając faktyczną rozgrywkę opisaną w~\cite{zalozenia}. Tutaj będą wdrożone zasady rozgrywki oraz~przejścia pomiędzy poszczególnymi ekranami interfejsu użytkownika.
@@ -118,7 +118,7 @@ Interfejs użytkownika używa mechanizmu graficznego do~narysowania elementów s
 Zastosowanie biblioteki OpenGL pozwala na~precyzyjną kontrolę nad wyświetlaniem obrazu. Dzięki temu możliwe jest zastosowanie zaawansowanych technik poprawiających jakość grafiki. Dodatkowo użycie zewnętrznych zasobów graficznych, znacznie ułatwia osiągnięcie realizmu graficznego. Realizm symulacji fizycznej osiągnięty zostanie dzięki wysokiej dokładności obliczeń symulatora dynamiki newtonowskiej.
 
 \section{Niezawodność}
-Moduły \textit{Symulatora lotu} stworzone zostaną przy użyciu języka C++ oraz biblioteki OpenGL. Narzędzia te pozwalają na~drobiazgową kontrolę nad każdym aspektem działania symulatora, poczynając od~kontroli pamięci, a~kończąc na~wyświetlaniu grafiki. Skorzystanie z nich pozwala na sprawdzenie poprawności kodu odpowiadającego za każdy poziom działania symulatora, co gwarantuje jego niezawodność.
+Moduły \textit{Symulatora lotu} stworzone zostaną przy użyciu języka C++ oraz biblioteki OpenGL. Narzędzia te pozwalają na~drobiazgową kontrolę nad każdym aspektem działania symulatora, poczynając od~kontroli pamięci, a~kończąc na~wyświetlaniu grafiki. Skorzystanie z nich pozwala na \linebreak sprawdzenie poprawności kodu odpowiadającego za każdy poziom działania symulatora, co gwarantuje jego niezawodność.
 
 \begin{thebibliography}{9}
     \bibitem{zalozenia} R. Hirsz, K. Wieczorek, K. Wróbel: \textit{Symulator lotu: Założenia ogólne}, Wrocław, SPIO IIUWr 2014.
